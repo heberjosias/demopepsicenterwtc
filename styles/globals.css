@@ -1,9 +1,27 @@
 html,
 body {
   padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1c3baf;
+  max-width: 1820px;  
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    background-image: linear-gradient(-340deg, #381ba7 0%, #1c3baf 40%, #45a6de 100%);
+  }  
+};
+
+
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -11,6 +29,42 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+h1{
+  margin: 0;
+  font-size: 4.5em;
+  font-weight: 900;
+  text-transform: uppercase;
 }
+
+h2{
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+h3{
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+p{
+  font-size: 1.1em;
+}
+
+img{
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  h1{
+    font-size: 3.5em;
+  }    
+  h2{
+    font-size: 2em;
+  }    
+};
+
+
+
+
