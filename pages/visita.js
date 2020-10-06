@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Zoom from 'react-reveal/Zoom';
 
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
@@ -16,6 +17,7 @@ const Llegada = styled.section`
     gap: 1em;
     text-align: center;
     @media (min-width: 1025px) {
+        padding: 2em 0;
         grid-template-columns: repeat(2,1fr);
         width: 95vw;
     }    
@@ -30,18 +32,19 @@ const Transporte = styled.div`
 `;
 
 const Icon = styled.div`
-    background: rgb(69,166,222);
-    background: -moz-radial-gradient(circle, rgba(69,166,222,0.8239670868347339) 0%, rgba(28,59,175,0.8911939775910365) 47%, rgba(28,59,175,0.8827906162464986) 72%, rgba(69,166,222,0.7763480392156863) 81%, rgba(56,27,167,1) 90%);
-    background: -webkit-radial-gradient(circle, rgba(69,166,222,0.8239670868347339) 0%, rgba(28,59,175,0.8911939775910365) 47%, rgba(28,59,175,0.8827906162464986) 72%, rgba(69,166,222,0.7763480392156863) 81%, rgba(56,27,167,1) 90%);
-    background: radial-gradient(circle, rgba(69,166,222,0.8239670868347339) 0%, rgba(28,59,175,0.8911939775910365) 47%, rgba(28,59,175,0.8827906162464986) 72%, rgba(69,166,222,0.7763480392156863) 81%, rgba(56,27,167,1) 90%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#45a6de",endColorstr="#381ba7",GradientType=1);
-    box-shadow: 1px 1px 4px 2px rgba(0,0,0,.2);
+    cursor: pointer;
     padding: 1em;
     border-radius: 50%;
-    transition: transform .4s;
+    transition: transform 2s;
     &:hover{
-        transition: transform .4s;
-        transform: scale(1.04);
+        background: rgb(69,166,222);
+        background: -moz-radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
+        background: -webkit-radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
+        background: radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#45a6de",endColorstr="#381ba7",GradientType=1);
+        box-shadow: 1px 1px 4px 2px rgba(0,0,0,.2);
+        transition: transform 2s;
+        transform: scale(1.05);
     }      
     @media (min-width: 768px) {
         padding: 2em;
@@ -149,21 +152,23 @@ const Visita = () => {
                         LastLetter="?"
                     />
                     <Transporte>
-                        <Icon>
-                            <a href="https://www.google.com/maps/search/metro/@19.39507,-99.181984,15z?hl=es-419" target="blank">
-                                <img src="/icon/metro.svg" alt="Conciertos"/>
-                            </a>
-                        </Icon>                          
-                        <Icon>
-                            <a href="https://www.google.com/maps/search/metrobus/@19.395069,-99.179109,15z?hl=es-419" target="blank">
-                                <img src="/icon/metrobus.svg" alt="Conciertos"/>
-                            </a>
-                        </Icon>  
-                        <Icon>
-                            <a href="https://www.google.com/maps/search/ecobici/@19.392612,-99.181602,15z?hl=es-419" target="blank">
-                                <img src="/icon/bicicleta.svg" alt="Conciertos"/>
-                            </a>
-                        </Icon>     
+                        <Zoom cascade>
+                            <Icon>
+                                <a href="https://www.google.com/maps/search/metro/@19.39507,-99.181984,15z?hl=es-419" target="blank">
+                                    <img src="/icon/metro.svg" alt="Conciertos"/>
+                                </a>
+                            </Icon>                          
+                            <Icon>
+                                <a href="https://www.google.com/maps/search/metrobus/@19.395069,-99.179109,15z?hl=es-419" target="blank">
+                                    <img src="/icon/metrobus.svg" alt="Conciertos"/>
+                                </a>
+                            </Icon>  
+                            <Icon>
+                                <a href="https://www.google.com/maps/search/ecobici/@19.392612,-99.181602,15z?hl=es-419" target="blank">
+                                    <img src="/icon/bicicleta.svg" alt="Conciertos"/>
+                                </a>
+                            </Icon>  
+                        </Zoom>   
                     </Transporte>                                                         
                 </div>
                 <div>
@@ -171,26 +176,30 @@ const Visita = () => {
                         Text1="Estacionamient"
                         LastLetter="o"
                     />
-                    <Estacionamiento src="/img/estacionamiento.png" alt="Estacionamiento PCWTC"/>
+                    <Zoom>
+                        <Estacionamiento src="/img/estacionamiento.png" alt="Estacionamiento PCWTC"/>
+                    </Zoom>
                 </div>                            
             </Llegada>
             <SubTitle
                 Text1="Centros de Consum"
                 LastLetter="o"
             />
-            <Consumo>                
-                <div>
-                    <img src="/icon/alimentos.svg"/>
-                    <p>Alimentos</p>
-                </div>
-                <div>
-                    <img src="/icon/bebidas.svg"/>
-                    <p>Bebidas</p>
-                </div>
-                <div>
-                    <img src="/icon/snacks.svg"/>
-                    <p>Snacks</p>
-                </div>                                
+            <Consumo>   
+                <Zoom cascade>
+                    <div>
+                        <img src="/icon/alimentos.svg"/>
+                        <p>Alimentos</p>
+                    </div>
+                    <div>
+                        <img src="/icon/bebidas.svg"/>
+                        <p>Bebidas</p>
+                    </div>
+                    <div>
+                        <img src="/icon/snacks.svg"/>
+                        <p>Snacks</p>
+                    </div>        
+                </Zoom>                        
             </Consumo>
             <SectionNews>
                 <Dudas>

@@ -16,9 +16,14 @@
     "@material-ui/icons": "^4.9.1",
     "antd": "^4.6.6",
     "babel-plugin-emotion": "^10.0.33",
+    "firebase": "^7.22.0",
+    "firebase-admin": "^9.2.0",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-player": "^2.6.2"
+    "react-firebase-file-uploader": "^2.4.3",
+    "react-particles-js": "^3.3.0",
+    "react-player": "^2.6.2",
+    "react-reveal": "^1.2.2"
   }
 }

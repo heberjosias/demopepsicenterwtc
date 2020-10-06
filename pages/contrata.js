@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Fade from 'react-reveal/Fade';
 
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
+import FormContrata from '../components/forms/formContrata';
 
 const Intro = styled.section`
     width: 90vw;
@@ -53,6 +55,16 @@ const Destacados = styled.section`
     } 
 `;
 
+const Form = styled.section`
+    width: 90vw;
+    margin: 1em auto;
+    text-align: center;
+    @media (min-width: 1025px) {        
+        width: 70vw;
+        margin: 1em auto 2em auto;
+    }     
+`;
+
 const Contrata = () => {
     return (
         <> 
@@ -74,19 +86,24 @@ const Contrata = () => {
                 </div>
             </Intro>   
             <Destacados>
-                <div>
-                    <img src="/icon/sustentable.svg"/>
-                    <p>Recinto<br></br>sustentable</p>
-                </div>
-                <div>
-                    <img src="/icon/visitor.svg"/>
-                    <p>Espacio para<br></br>7,000 espectadores</p>
-                </div>
-                <div>
-                    <img src="/icon/bebidas.svg"/>
-                    <p>Centros de<br></br>consumo</p>
-                </div>    
+                <Fade cascade>
+                    <div>
+                        <img src="/icon/sustentable.svg"/>
+                        <p>Recinto<br></br>sustentable</p>
+                    </div>
+                    <div>
+                        <img src="/icon/visitor.svg"/>
+                        <p>Espacio para<br></br>7,000 espectadores</p>
+                    </div>
+                    <div>
+                        <img src="/icon/bebidas.svg"/>
+                        <p>Centros de<br></br>consumo</p>
+                    </div>    
+                </Fade>
             </Destacados>
+            <Form>
+                <FormContrata/>
+            </Form>
         </Layout>
         </>
      );

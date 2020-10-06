@@ -12,7 +12,7 @@ const Section = styled.div`
 
 const Title1 = styled.h1`
     color:#00d8ff;
-    line-height: .3;
+    line-height: 1;
 `;
 
 const Title2 = styled.h1`
@@ -20,7 +20,7 @@ const Title2 = styled.h1`
     font-weight: 400;
 `;
 
-const Title = ({Text1, Text2}) => {
+const TitleEvento = ({Text1, Text2}) => {
     return (         
         <Section>
             <Fade>
@@ -31,4 +31,4 @@ const Title = ({Text1, Text2}) => {
      );
 }
  
-export default Title;
+export default TitleEvento;

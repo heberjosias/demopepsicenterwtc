@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
@@ -25,7 +27,7 @@ const Intro = styled.section`
         padding: 1em 0 0 0;
     }     
     @media (min-width: 1025px) {
-        padding: 2em 0;
+        padding: 3em 0 2em 0;
         width: 95vw;
         grid-template-columns: repeat(2, 1fr);
         gap: 2em;
@@ -61,9 +63,9 @@ const Destacados = styled.div`
 
 const Icon = styled.div`
     background: rgb(69,166,222);
-    background: -moz-radial-gradient(circle, rgba(69,166,222,0.8239670868347339) 0%, rgba(28,59,175,0.8911939775910365) 47%, rgba(28,59,175,0.8827906162464986) 72%, rgba(69,166,222,0.7763480392156863) 81%, rgba(56,27,167,1) 90%);
-    background: -webkit-radial-gradient(circle, rgba(69,166,222,0.8239670868347339) 0%, rgba(28,59,175,0.8911939775910365) 47%, rgba(28,59,175,0.8827906162464986) 72%, rgba(69,166,222,0.7763480392156863) 81%, rgba(56,27,167,1) 90%);
-    background: radial-gradient(circle, rgba(69,166,222,0.8239670868347339) 0%, rgba(28,59,175,0.8911939775910365) 47%, rgba(28,59,175,0.8827906162464986) 72%, rgba(69,166,222,0.7763480392156863) 81%, rgba(56,27,167,1) 90%);
+    background: -moz-radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
+    background: -webkit-radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
+    background: radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#45a6de",endColorstr="#381ba7",GradientType=1);
     box-shadow: 1px 1px 4px 2px rgba(0,0,0,.2);
     padding: 1.5em;
@@ -104,38 +106,40 @@ const Conoce = () => {
                         <ImgIntro src="/img/conocepcwtc.jpg" alt="Conoce PCWTC"/>
                         <h3>En el Año</h3>
                         <Destacados>
-                            <div>
-                                <Icon>
-                                    <img src="/icon/karaoke.svg" alt="Conciertos"/>
-                                </Icon>       
-                                <br></br>                         
-                                <p>40</p>
-                                <p>Conciertos</p>
-                            </div>
-                            <div>
-                                <Icon>
-                                    <img src="/icon/visitor.svg" alt="Visitantes"/>
-                                </Icon>     
-                                <br></br>                         
-                                <p>4,000</p>
-                                <p>Visitantes</p>
-                            </div>           
-                            <div>
-                                <Icon>
-                                    <img src="/icon/spotlights.svg" alt="Shows"/>
-                                </Icon>     
-                                <br></br>                         
-                                <p>10</p>
-                                <p>Shows</p>
-                            </div>      
-                            <div>
-                                <Icon>
-                                    <img src="/icon/soldout.svg" alt="Sold out"/>
-                                </Icon>     
-                                <br></br>                         
-                                <p>12</p>
-                                <p>Sold out</p>
-                            </div>                                                                        
+                            <Zoom cascade>
+                                <div>
+                                    <Icon>
+                                        <img src="/icon/karaoke.svg" alt="Conciertos"/>
+                                    </Icon>       
+                                    <br></br>                         
+                                    <p>40</p>
+                                    <p>Conciertos</p>
+                                </div>
+                                <div>
+                                    <Icon>
+                                        <img src="/icon/visitor.svg" alt="Visitantes"/>
+                                    </Icon>     
+                                    <br></br>                         
+                                    <p>4,000</p>
+                                    <p>Visitantes</p>
+                                </div>           
+                                <div>
+                                    <Icon>
+                                        <img src="/icon/spotlights.svg" alt="Shows"/>
+                                    </Icon>     
+                                    <br></br>                         
+                                    <p>10</p>
+                                    <p>Shows</p>
+                                </div>      
+                                <div>
+                                    <Icon>
+                                        <img src="/icon/soldout.svg" alt="Sold out"/>
+                                    </Icon>     
+                                    <br></br>                         
+                                    <p>12</p>
+                                    <p>Sold out</p>
+                                </div>     
+                            </Zoom>                                                                   
                         </Destacados>
                     </div>
                     <Video
@@ -143,30 +147,42 @@ const Conoce = () => {
                     />
                 </Intro>
                 <Gallery>
-                    <Imagen
-                        url="/img/galeria1.jpg"
-                        alt="Galeria PCWTC"
-                    />
-                    <Imagen
-                        url="/img/galeria2.jpg"
-                        alt="Galeria PCWTC"
-                    />
-                    <Imagen
-                        url="/img/galeria3.jpg"
-                        alt="Galeria PCWTC"
-                    />
-                    <Imagen
-                        url="/img/galeria3.jpg"
-                        alt="Galeria PCWTC"
-                    />
-                    <Imagen
-                        url="/img/galeria1.jpg"
-                        alt="Galeria PCWTC"
-                    />                    
-                    <Imagen
-                        url="/img/galeria2.jpg"
-                        alt="Galeria PCWTC"
-                    />                                                                                                                        
+                    <Fade bottom>
+                        <Imagen
+                            url="/img/galeria1.jpg"
+                            alt="Galeria PCWTC"
+                        />
+                    </Fade> 
+                    <Fade bottom>
+                        <Imagen
+                            url="/img/galeria2.jpg"
+                            alt="Galeria PCWTC"
+                        />
+                    </Fade> 
+                    <Fade bottom>
+                        <Imagen
+                            url="/img/galeria3.jpg"
+                            alt="Galeria PCWTC"
+                        />
+                    </Fade> 
+                    <Fade bottom>
+                        <Imagen
+                            url="/img/galeria3.jpg"
+                            alt="Galeria PCWTC"
+                        />
+                    </Fade> 
+                    <Fade bottom>
+                        <Imagen
+                            url="/img/galeria1.jpg"
+                            alt="Galeria PCWTC"
+                        />
+                    </Fade>                   
+                    <Fade bottom>
+                        <Imagen
+                            url="/img/galeria2.jpg"
+                            alt="Galeria PCWTC"
+                        />
+                    </Fade>                                                                                                                         
                 </Gallery>
             </Layout>
         </>

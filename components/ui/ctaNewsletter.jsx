@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled';
+import Zoom from 'react-reveal/Zoom';
 
 import {Label, Input} from './form';
-import {Btn} from './btn';
+import {InputSubmit} from './btn';
 
 const Section = styled.div`
     background-image: linear-gradient(-260deg, rgba(4,27,49,.4) 32%, rgba(24,48,82,.4) 48%, rgba(4,27,49,.4) 80%);     
@@ -36,23 +37,28 @@ const Header = styled.div`
 const CtaNewsletter = () => {
     return ( 
         <Section>
-            <Header>
-                <img src="/icon/concert.svg" alt="Conciertos PCWTC"/>
-                <div>
-                    <p>Suscríbete a nuestro</p>
-                    <h3>Newsletter</h3>
-                </div>
-            </Header>      
-            <form>
-                <Label htmlFor="email">Email</Label>
-                <Input 
-                    type="email"
-                    id="email"
-                    name="email" 
-                    placeholder="Email"               
-                />
-                <Btn>Enviar</Btn>                
-            </form>      
+            <Zoom>
+                <Header>
+                    <img src="/icon/concert.svg" alt="Conciertos PCWTC"/>
+                    <div>
+                        <p>Suscríbete a nuestro</p>
+                        <h3>Newsletter</h3>
+                    </div>
+                </Header>      
+                <form>
+                    <Label htmlFor="email">Email</Label>
+                    <Input 
+                        type="email"
+                        id="email"
+                        name="email" 
+                        placeholder="Email"               
+                    />
+                    <InputSubmit
+                        type="submit"
+                        value="enviar"
+                    />
+                </form>   
+            </Zoom>   
         </Section>
      );
 }

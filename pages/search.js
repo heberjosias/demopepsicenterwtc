@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
 
 import SEO from '../components/layout/seo';
@@ -29,7 +30,7 @@ const Newsletter = styled.div`
   }
 `;
 
-const Home = () => {
+const Search = () => {
 
   return ( 
     <>
@@ -57,4 +58,4 @@ const Home = () => {
    );
 }
  
-export default Home;
+export default Search;

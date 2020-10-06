@@ -9,11 +9,12 @@ body {
 body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("/img/background.jpg");
   background-color: #1c3baf;
   max-width: 1820px;  
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   body{
     background-image: linear-gradient(-340deg, #381ba7 0%, #1c3baf 40%, #45a6de 100%);
   }  
@@ -40,12 +41,14 @@ h2{
   margin: 0;
   font-size: 2.5em;
   font-weight: 600;
+  text-shadow: -1px -2px 2px #00d8ff;
 }
 
 h3{
   margin: 0;
   font-size: 1.8em;
   font-weight: 600;
+  text-shadow: 1px 2px 2px rgba(0,0,0,.3);
 }
 
 p{
@@ -56,13 +59,21 @@ img{
   max-width: 100%;
 }
 
+input, textarea {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 @media screen and (max-width: 768px) {
   h1{
-    font-size: 3.5em;
+    font-size: 3em;
   }    
   h2{
-    font-size: 2em;
-  }    
+    font-size: 1.8em;
+  } 
+  h3{
+    font-size: 1.6em;
+  }      
 };
 
 

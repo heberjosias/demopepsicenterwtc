@@ -3,9 +3,6 @@ import styled from '@emotion/styled';
 
 const Section = styled.div`
     text-align: center;
-    @media (min-width: 768px) {
-        padding: 1em 0;
-    }
 `; 
 
 const Subtitle1 = styled.h2`    
