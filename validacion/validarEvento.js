@@ -20,15 +20,11 @@ export default function validarEvento(valores) {
 
     if(!valores.utm) {
         errores.utm = "UTM Obligatoria";
-    }  
+    } 
     
-    if(!valores.horario) {
-        errores.horario = "Horario Obligatorio";
-    }    
-
-    if(!valores.objetos) {
-        errores.objetos = "Objetos Obligatorios";
-    }  
+    if(!valores.googlecalendar) {
+        errores.googlecalendar = "Url Obligatoria";
+    }     
 
     if(!valores.slug) {
         errores.slug = "Email Obligatorio";

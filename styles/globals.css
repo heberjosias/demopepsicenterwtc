@@ -11,12 +11,11 @@ body{
   -moz-osx-font-smoothing: grayscale;
   background-image: url("/img/background.jpg");
   background-color: #1c3baf;
-  max-width: 1820px;  
 }
 
 @media screen and (max-width: 1025px) {
   body{
-    background-image: linear-gradient(-340deg, #381ba7 0%, #1c3baf 40%, #45a6de 100%);
+    background-image: linear-gradient(-260deg, #45a6de 0%, #1c3baf 52%, #381ba7 100%) !important;
   }  
 };
 

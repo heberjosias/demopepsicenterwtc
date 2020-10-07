@@ -27,6 +27,7 @@ const Section = styled.section`
 const Cartelera = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     gap: 1em;
 `;
 

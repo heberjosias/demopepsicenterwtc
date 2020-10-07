@@ -35,7 +35,7 @@ const CtaSpotify = ({text1, text2}) => {
     return (
         <Section>
             <Zoom>
-                <a href="https://open.spotify.com/embed/playlist/61Pym1kUmJrOzkUb7FIwNV" target="blank">
+                <a href="https://open.spotify.com/playlist/61Pym1kUmJrOzkUb7FIwNV" target="blank">
                     <Content>
                         <img src="/icon/ctaspotify.svg"/>
                         <div>

@@ -131,14 +131,15 @@ const ConfiguracionImg = styled.img`
     transition: transform 1s;
     &:hover{
         transition: transform 1s;
-        transform: scale(1.05);
+        transform: scale(1.1);
+        @media (max-width: 768px) {            
+            transform: scale(1.05);
+        }          
     }        
 `;
 
 
 const ConfiguracionText = styled.div`
-    @media (min-width: 768px) {            
-    }  
     @media (min-width: 1024px) {            
         display: flex;
         justify-content: center;
@@ -150,7 +151,7 @@ const Costos = styled.div`
     display:grid;
     grid-template-columns:repeat(2, 1fr);
     align-items:center;
-    column-gap: 1rem;
+    column-gap: 1em;
     margin: 0 0 0 18%;
     h4{
         text-align:right;
@@ -172,54 +173,29 @@ const Costos = styled.div`
 `;
 
 const Adicionales = styled.div`
-    text-align: center;
     margin: 1em 0;
-
+    text-align: center;
 `;
 
 const Compartir = styled.div`
     img{
-        margin: 01em;
+        margin: 1em;
         width: 3em;
         border-radius: 4px;
+        transition: transform .5s;
+        &:hover{
+            transition: transform .5s;
+            transform: scale(1.07);
+        }     
     }
     @media (min-width: 768px) {            
         margin: 0 0 0 4em;    
     } 
 `;
 
-const Importante = styled.div`
-    padding:0% 0 5% 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    h2{
-        color: #00d8ff;
-        font-size: 2rem;        
-        margin:0;
-        @media (min-width: 768px) {                 
-            font-size: 3rem;        
-        }         
-    }
-    a{
-        color: #ff0062;
-        font-weight:700;
-    }
-    @media (min-width: 768px) {                 
-        grid-template-columns: 66% 32%;
-        margin:1% 1% 0% 1%;
-        padding:3% 0;
-        column-gap:2rem;
-    }  
-`;
-
-const Playlist = styled.div`
-    @media (max-width: 768px) {                 
-        display:none;
-    } 
-`;
 
 const SectionNews = styled.section`
-    margin: 2em auto;
+    margin: 2em auto 0  auto;
     padding: 1em 0;
     text-align: center;    
     display: grid;   
@@ -302,7 +278,16 @@ const Evento = () => {
     }, [id, nota]);
     //console.log(nota);
 
-    const { name, fecha, conteo, desc, imgEvento, imgConfiguracion, seccion1, costo1, seccion2, costo2, seccion3, costo3, seccion4, costo4, seccion5, costo5, seccion6, costo6, seccion7, costo7, seccion8, costo8, utm, objetos, tour, playlist  } =nota;
+    const { name, fecha, conteo, desc, googlecalendar,imgEvento, imgConfiguracion, seccion1, costo1, seccion2, costo2, seccion3, costo3, seccion4, costo4, seccion5, costo5, seccion6, costo6, seccion7, costo7, seccion8, costo8, utm, objetos, tour, playlist  } =nota;
+
+    let fechaActual = new Date();
+    let fechaFiltro = new Date(conteo);
+    let Time = (fechaFiltro - fechaActual + 1000) / 1000;
+    let Seconds = ('0' + Math.floor(Time % 60)).slice(-2);
+    let Minuts = ('0' + Math.floor(Time / 60 % 60)).slice(-2);
+    let Hours = ('0' + Math.floor(Time / 3600 % 24)).slice(-2);
+    let Days = Math.floor(Time / (3600 * 24));
+    let Restante = Days+"d "+Hours+":"+Minuts+":"+Seconds+" HRS";
 
     return (
         <> 
@@ -319,8 +304,8 @@ const Evento = () => {
                         </Fade>
                         <p>{desc}</p>
                         <CounterMobile>
-                                <h4>73d 05:05:40 HRS</h4>
-                                <Btn href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Global+Ska+Fest&dates=20201219T120000/20201219T120000&details=Recordatorio&location=Pepsi+Center+WTC&pli=1" target="blank" >Google Calendar</Btn>
+                                <h4>{Restante}</h4>
+                                <Btn href={googlecalendar} target="blank">Google Calendar</Btn>
                         </CounterMobile>
                     </HeroMobile>
                     <HeroDesktop>
@@ -332,8 +317,8 @@ const Evento = () => {
                             <h3>{fecha}</h3>
                             <p>{desc}</p>
                             <Counter>
-                                <h4>73d 05:05:40 HRS</h4>
-                                <Btn href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Global+Ska+Fest&dates=20201219T120000/20201219T120000&details=Recordatorio&location=Pepsi+Center+WTC&pli=1" target="blank" >Google Calendar</Btn>
+                                <h4>{Restante}</h4>
+                                <Btn href={googlecalendar} target="blank">Google Calendar</Btn>
                             </Counter>
                         </div>
                     </HeroDesktop>
@@ -343,10 +328,14 @@ const Evento = () => {
                     <h3>Costos</h3>                
                     <ConfiguracionText>                    
                         <Costos>
-                            <h4>{seccion1}</h4><p>${costo1}</p>
-                            <h4>{seccion2}</h4><p>${costo2}</p>
-                            <h4>{seccion3}</h4><p>${costo3}</p>
-                            <h4>{seccion4}</h4><p>${costo4}</p>
+                            <h4>{seccion1}</h4><p>{costo1}</p>
+                            <h4>{seccion2}</h4><p>{costo2}</p>
+                            <h4>{seccion3}</h4><p>{costo3}</p>
+                            <h4>{seccion4}</h4><p>{costo4}</p>
+                            <h4>{seccion5}</h4><p>{costo5}</p>
+                            <h4>{seccion6}</h4><p>{costo6}</p>
+                            <h4>{seccion7}</h4><p>{costo7}</p> 
+                            <h4>{seccion8}</h4><p>{costo8}</p> 
                         </Costos>                 
                         <Adicionales>
                             <div> 

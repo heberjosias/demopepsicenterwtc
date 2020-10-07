@@ -72,8 +72,7 @@ export const NavMobile = styled.div`
         display: grid;     
         gap: 1.4em;
         a{
-            font-size: 1.8em;
-            padding: 5px 10px;
+            font-size: 1.5em;
             border: 2px solid transparent;
             transition: all 0.30s ease-out;
             &:active {
@@ -94,7 +93,7 @@ export const NavMobile = styled.div`
         align-items: center;
         img{
             height: 2.5em;
-            max-width: 5em;            
+            max-width: 4em;            
         }
     }
 `;

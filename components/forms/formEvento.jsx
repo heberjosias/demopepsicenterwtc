@@ -11,7 +11,6 @@ import validarEvento from '../../validacion/validarEvento';
 
 const Section = styled.div`
     margin: 0 auto;
-    padding: 2em 0;
     @media (min-width: 1025px) {        
         width: 50%;
         padding: 3em 0;
@@ -62,6 +61,7 @@ const STATE_INICIAL = {
     desc:'',
     tour:'',
     utm:'',
+    googlecalendar:'',
     playlist:'',
     seccion1:'',
     costo1:'',
@@ -97,7 +97,7 @@ const FormEvento = () => {
 
     const [error, guardarError] = useState(false);
     const {valores, errores, handleChange, handleSubmit} = useValidacion(STATE_INICIAL, validarEvento, crearEvento);
-    const { name, fecha, conteo, desc, tour, utm, playlist, seccion1, costo1, seccion2, costo2, seccion3, costo3, seccion4, costo4, seccion5, costo5, seccion6, costo6, seccion7, costo7, seccion8, costo8, horario, objetos, imgEvento, imgCartelera, imgConfiguracion, slug } = valores;    
+    const { name, fecha, conteo, desc, tour, utm, googlecalendar, playlist, seccion1, costo1, seccion2, costo2, seccion3, costo3, seccion4, costo4, seccion5, costo5, seccion6, costo6, seccion7, costo7, seccion8, costo8, horario, objetos, imgEvento, imgCartelera, imgConfiguracion, slug } = valores;    
 
     const router = useRouter();
     const { firebase } = useContext(FirebaseContext);
@@ -105,7 +105,7 @@ const FormEvento = () => {
     async function crearEvento() {
         console.log('Creando Evento...');    
         const data = {
-            name, fecha, conteo, desc, tour, utm, playlist, seccion1, costo1, seccion2, costo2, seccion3, costo3, seccion4, costo4, seccion5, costo5, seccion6, costo6, seccion7, costo7, seccion8, costo8, horario, objetos, imgEvento, imgCartelera, imgConfiguracion, slug,         
+            name, fecha, conteo, desc, tour, utm, googlecalendar, playlist, seccion1, costo1, seccion2, costo2, seccion3, costo3, seccion4, costo4, seccion5, costo5, seccion6, costo6, seccion7, costo7, seccion8, costo8, horario, objetos, imgEvento, imgCartelera, imgConfiguracion, slug,         
             creado: Date.now()
           }
         let refData = 'eventos';   
@@ -401,11 +401,10 @@ const FormEvento = () => {
                             type="text"
                             id="horario"
                             name="horario"
-                            placeholder="Horario*"
+                            placeholder="Horario"
                             value={horario}
                             onChange={handleChange}
                         />
-                        {errores.horario && <Error>{errores.horario}</Error> }
                     </Elemento>
                     <Elemento> 
                         <Label htmlFor="objetos">Objetos no Permitidos</Label>
@@ -413,15 +412,26 @@ const FormEvento = () => {
                             type="text"
                             id="objetos"
                             name="objetos"
-                            placeholder="Objetos*"
+                            placeholder="Objetos"
                             value={objetos}
                             onChange={handleChange}
                         />
-                        {errores.objetos && <Error>{errores.objetos}</Error> }
                     </Elemento>                       
                 </Columns2>
                 <h3>URL Final</h3>
                 <Columns2>
+                <Elemento> 
+                        <Label htmlFor="googlecalendar">Google Calendar</Label>
+                        <InputAdmin
+                            type="text"
+                            id="googlecalendar"
+                            name="googlecalendar"
+                            placeholder="Url Google Calendar*"
+                            value={googlecalendar}
+                            onChange={handleChange}
+                        />
+                        {errores.slug && <Error>{errores.slug}</Error> }
+                    </Elemento>                  
                     <Elemento> 
                         <Label htmlFor="slug">Slug</Label>
                         <InputAdmin
