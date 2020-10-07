@@ -11,6 +11,20 @@ import Blog from '../components/blog/blog';
 import CtaSpotify from '../components/ui/ctaSpotify';
 import CtaNewsletter from '../components/ui/ctaNewsletter';
 
+const General = styled.div`
+    position:relative;
+`;
+
+const Circle = styled.img`
+    position: absolute; 
+    top: 15%;
+    left: 10%;
+    z-index: 10;            
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
 const Section = styled.div`
     margin: 2em 0;
 `;
@@ -29,21 +43,24 @@ const Cartelera = () => {
     return ( 
         <>
             <SEO Title="Cartelera"/>
-            <Layout>
-                <Title 
-                    Text1="Tus Eventos"
-                    Text2="Favoritos"
-                />
-                <CarteleraDesktop/>
-                <CarteleraPrincipal/>
-                <SubTitle
-                    Text1="Lo más destacad"
-                    LastLetter="o"
-                />
-                <Section>
-                    <Blog/>
-                </Section>
-            </Layout>
+            <General>   
+                <Circle src="/img/circle.png" />             
+                <Layout>                    
+                    <Title 
+                        Text1="Tus Eventos"
+                        Text2="Favoritos"
+                    />
+                    <CarteleraDesktop/>
+                    <CarteleraPrincipal/>
+                    <SubTitle
+                        Text1="Lo más destacad"
+                        LastLetter="o"
+                    />
+                    <Section>
+                        <Blog/>
+                    </Section>
+                </Layout>
+            </General>
         </>        
      );
 }
