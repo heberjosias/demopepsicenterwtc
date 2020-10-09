@@ -22,6 +22,7 @@ const EventoDesktop = styled.div`
         width: 60%;
         margin: 0;
         line-height: .8;
+        cursor: pointer;
     }
     p{
         margin: 10px 0;
@@ -51,7 +52,7 @@ const EventoMobile = styled.div`
     }    
     h1{
         width: 80%;
-        margin: 0 auto;
+        margin: 10px auto 0 auto;
         line-height: .8;
     }
     p{
@@ -78,9 +79,9 @@ const Bloque = styled.div`
 const BloqueMobile = styled.div`
     content:'';
     background-image: linear-gradient(-260deg, rgba(5,19,49,1) 15%, rgba(7,21,62,.8) 48%, rgba(5,19,49,1) 85%);     
-    height: 6.9em;
+    height: 6em;
     width: 80%;
-    margin: -34% auto 0 auto;
+    margin: -40% auto 0 auto;
     z-index: -10;
     @media (min-width: 767px) {
         margin: -14% auto 0 auto;
@@ -108,13 +109,12 @@ const PrincipalPreview = ({data}) => {
                 </Link>
             </Fade>
             <div>
-            <h1>{name}</h1>
-            <p>{fecha}</p>
+                <Link href="/cartelera/[id]" as={`/cartelera/${id}`}>
+                    <h1>{name}</h1>
+                </Link>
+                <p>{fecha}</p>
             <Bloque/>
                 <Btns>
-                    <Link href="/cartelera/[id]" as={`/cartelera/${id}`}>
-                        <BtnCTA>Ver más</BtnCTA>
-                    </Link>
                     <a href={utm} target="blank">
                         <Btn>Boletos</Btn>
                     </a>

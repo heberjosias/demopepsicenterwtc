@@ -43,11 +43,11 @@ const Newsletter = () => {
                         Text2="Newsletter"
                     />
                     <SubTitle
-                        Text1="Confirmación Evento"
-                        LastLetter="s"
+                        Text1="Recibe informació"
+                        LastLetter="n"
                     /> 
                     <SubTitle
-                        Text1="y preventas especiale"
+                        Text1="de nuestros concierto"
                         LastLetter="s"
                     />      
                     <Datos>

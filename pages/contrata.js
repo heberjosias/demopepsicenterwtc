@@ -15,15 +15,22 @@ const Intro = styled.section`
     display: grid;
     grid-template-columns: 1fr;
     gap: 2em;
-    p{
-        text-align: justify;
+    p{        
+        text-align: left;
         @media (min-width: 1025px) {
             text-align: center;
+            padding: 0 5em;
         }  
     }
-    @media (min-width: 1025px) {
-        width: 70vw;
+    @media (min-width: 1025px) {   
+        margin: 2em auto;     
+        background-image: linear-gradient(-260deg, rgba(4,27,49,.4) 32%, rgba(24,48,82,.4) 48%, rgba(4,27,49,.4) 80%);             
+        width: 70%;
     }  
+`;
+
+const Test = styled.div`
+        background-image: linear-gradient(-260deg, rgba(4,27,49,.4) 32%, rgba(24,48,82,.4) 48%, rgba(4,27,49,.4) 80%);     
 `;
 
 const Destacados = styled.section`
@@ -51,7 +58,7 @@ const Destacados = styled.section`
         }
     }
     @media (min-width: 1025px) {        
-        width: 80vw;
+        width: 80%;
     } 
 `;
 
@@ -60,7 +67,7 @@ const Form = styled.section`
     margin: 1em auto;
     text-align: center;
     @media (min-width: 1025px) {        
-        width: 70vw;
+        width: 70%;
         margin: 1em auto 2em auto;
     }     
 `;
@@ -77,10 +84,10 @@ const Contrata = () => {
             <SubTitle
                 Text1="Nuestro Venu"
                 LastLetter="e"
-            />      
+            />     
             <Intro>
                 <div>
-                    <p>Pepsi Center WTC es la mejor opción para tus eventos. Se caracteriza por ser un espacio multifuncional y versátil. El recinto  cuenta con distintas configuraciones que se adaptan  a las necesidades de cada promotor.</p>       
+                    <p>Pepsi Center WTC es la mejor opción para tus eventos. Se caracteriza por ser un espacio multifuncional y versátil. El recinto cuenta con distintas configuraciones que se adaptan a las necesidades de cada promotor.</p>
                     <p>Con una capacidad  de 3,342 personas en configuración auditorio y de 6, 486 hasta máximo  8,000 personas en configuración concierto, también  cuenta con su propio y muy completo Rider que lo hace idóneo para todos los géneros musicales.</p>             
                     <p>Además de estar ubicado en World Trade Center México y tener vías de transporte público que hacen muy fácil la llegada al recinto, cuenta con más de tres mil cajones de estacionamiento.</p>
                 </div>

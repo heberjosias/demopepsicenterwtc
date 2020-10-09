@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 const Section = styled.section`
     width: 90vw;
-    margin: 2em auto 0 auto;
+    margin: 3em auto 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
@@ -12,7 +12,7 @@ const Section = styled.section`
         gap: 2em;
     }    
     @media (min-width: 1024px) {
-        margin: 2em auto 1em auto;
+        margin: 3em auto 2em auto;
         width: 95vw;
         grid-template-columns: repeat(4, 1fr);
         gap: 3em;
@@ -28,14 +28,10 @@ const Patrocinadores = () => {
     return (         
         <Section>
             <Fade cascade >
-            <Patrocinador>
-            </Patrocinador>
-            <Patrocinador>
-            </Patrocinador>
-            <Patrocinador>
-            </Patrocinador>
-            <Patrocinador>
-            </Patrocinador>                                    
+                <img src="/img/patrocinador.jpg"/>
+                <img src="/img/patrocinador.jpg"/>
+                <img src="/img/patrocinador.jpg"/>
+                <img src="/img/patrocinador.jpg"/>                 
             </Fade>
         </Section>
      );

@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-import {FooterStyle} from '../ui/layout';
+import {FooterStyle, RRSS} from '../ui/layout';
 
 const Footer = () => {
     return ( 
@@ -14,7 +13,7 @@ const Footer = () => {
                 <p>HIR Expo Internacional ©2020</p>
                 <a href="https://ciecwtc.com/doc/avisodeprivacidad.pdf" target="blank">Aviso de privacidad</a>
             </section>
-            <div>
+            <RRSS>
                 <a href="https://www.facebook.com/gopepsicenterwtc/" target="blank">
                     <img src="/icon/facebook.svg" alt="RSSS"/>
                 </a>
@@ -30,7 +29,7 @@ const Footer = () => {
                 <a href="hhttps://open.spotify.com/user/pepsicenterwtc" target="blank">
                     <img src="/icon/spotify.svg" alt="RSSS"/>
                 </a>  
-            </div>
+            </RRSS>
         </FooterStyle>
      );
 }

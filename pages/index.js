@@ -37,11 +37,6 @@ const Home = () => {
       <Layout>
         <EventosPrincipal/>
         <CarteletaPrincipal/>
-        <SubTitle
-            Text1="Lo más destacad"
-            LastLetter="o"
-        />
-        <Blog/>
         <CTA>
           <CtaSpotify
             text1="Escucha a tus"

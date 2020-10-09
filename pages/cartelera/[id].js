@@ -287,7 +287,7 @@ const Evento = () => {
     let Minuts = ('0' + Math.floor(Time / 60 % 60)).slice(-2);
     let Hours = ('0' + Math.floor(Time / 3600 % 24)).slice(-2);
     let Days = Math.floor(Time / (3600 * 24));
-    let Restante = Days+"d "+Hours+":"+Minuts+":"+Seconds+" HRS";
+    let Restante = Days+"d "+Hours+":"+Minuts+" HRS";
 
     return (
         <> 
@@ -328,14 +328,14 @@ const Evento = () => {
                     <h3>Costos</h3>                
                     <ConfiguracionText>                    
                         <Costos>
-                            <h4>{seccion1}</h4><p>{costo1}</p>
-                            <h4>{seccion2}</h4><p>{costo2}</p>
-                            <h4>{seccion3}</h4><p>{costo3}</p>
-                            <h4>{seccion4}</h4><p>{costo4}</p>
-                            <h4>{seccion5}</h4><p>{costo5}</p>
-                            <h4>{seccion6}</h4><p>{costo6}</p>
-                            <h4>{seccion7}</h4><p>{costo7}</p> 
-                            <h4>{seccion8}</h4><p>{costo8}</p> 
+                            { seccion1 ? <><h4>{seccion1}</h4><p>${costo1}</p></> : null }
+                            { seccion2 ? <><h4>{seccion2}</h4><p>${costo2}</p></> : null }
+                            { seccion3 ? <><h4>{seccion3}</h4><p>${costo3}</p></> : null }
+                            { seccion4 ? <><h4>{seccion4}</h4><p>${costo4}</p></> : null }
+                            { seccion5 ? <><h4>{seccion5}</h4><p>${costo5}</p></> : null }
+                            { seccion6 ? <><h4>{seccion6}</h4><p>${costo6}</p></> : null }
+                            { seccion7 ? <><h4>{seccion7}</h4><p>${costo7}</p></> : null }
+                            { seccion8 ? <><h4>{seccion8}</h4><p>${costo8}</p></> : null }
                         </Costos>                 
                         <Adicionales>
                             <div> 

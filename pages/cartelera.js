@@ -4,12 +4,9 @@ import styled from '@emotion/styled';
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
 import Title from '../components/ui/title';
-import SubTitle from '../components/ui/subtitle';
 import CarteleraDesktop from '../components/eventos/carteleraDesktop';
 import CarteleraPrincipal  from '../components/eventos/carteleraPrincipal';
-import Blog from '../components/blog/blog';
-import CtaSpotify from '../components/ui/ctaSpotify';
-import CtaNewsletter from '../components/ui/ctaNewsletter';
+import Patrocinadores from '../components/ui/patrocinadores';
 
 const General = styled.div`
     position:relative;
@@ -52,13 +49,7 @@ const Cartelera = () => {
                     />
                     <CarteleraDesktop/>
                     <CarteleraPrincipal/>
-                    <SubTitle
-                        Text1="Lo más destacad"
-                        LastLetter="o"
-                    />
-                    <Section>
-                        <Blog/>
-                    </Section>
+                    <Patrocinadores/>
                 </Layout>
             </General>
         </>        

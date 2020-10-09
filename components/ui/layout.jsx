@@ -101,7 +101,7 @@ export const NavMobile = styled.div`
 export const FooterStyle = styled.footer`
     width: 90vw;
     margin: 0 auto;
-    padding: 0 0 1em 0;
+    padding: 0 0 2em 0;
     display: grid;
     gap: 1em;
     align-items: center;
@@ -124,17 +124,21 @@ export const FooterStyle = styled.footer`
             font-weight: 600;
         }
     }
-    div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        img{
-            height: 2em;
-            max-width: 5em;            
-        }
-    }
     @media (min-width: 1025px) {
         width: 95vw;
         grid-template-columns: repeat(3,1fr);
     }    
+`;
+
+export const RRSS = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        height: 2em;
+        max-width: 5em;            
+    }
+    @media (max-width: 768px) {
+        display: none;
+    }   
 `;

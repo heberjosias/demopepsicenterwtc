@@ -72,7 +72,10 @@ const Consumo = styled.section`
     gap: 1em;    
     div{
         img{
-            width: 10em;
+            width: 5em;
+            @media (min-width: 1025px) {        
+                width: 10em;
+            }              
         }
         p{            
             font-weight: 600;

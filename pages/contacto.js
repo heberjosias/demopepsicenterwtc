@@ -90,8 +90,8 @@ const Contacto = () => {
                     Text2="PCWTC"
                 />
                 <SubTitle
-                    Text1="Datos de contact"
-                    LastLetter="o"
+                    Text1="¿Cómo podemos ayudarte"
+                    LastLetter="?"
                 /> 
                 <Datos>
                     <FormContacto/>
