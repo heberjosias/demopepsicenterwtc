@@ -1,5 +1,4 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 import styled from '@emotion/styled';
 
 import SEO from '../components/layout/seo';
@@ -12,11 +11,45 @@ const General = styled.div`
     position:relative;
 `;
 
+const Back = styled.img`
+    position: absolute; 
+    top: 2%;    
+    left: 5%;
+    width: 90%;  
+    margin: 0 auto;
+    z-index: -999;          
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
 const Circle = styled.img`
     position: absolute; 
-    top: 15%;
-    left: 10%;
+    top: 20%;
+    left: 5%;
     z-index: 10;            
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const Circle2 = styled.img`
+    position: absolute; 
+    top: 15%;
+    right: 10%;
+    z-index: 10;            
+    width: 60px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const CircleBack = styled.img`
+    position: absolute; 
+    top: 20%;
+    right: 0%;
+    z-index: -999;            
+    width: 180px;
     @media (max-width: 768px) {
         display: none;
     }
@@ -34,8 +67,11 @@ const Prensa = () => {
     return (
         <>
             <SEO Title="Prensa"/>            
-            <General> 
-            <Circle src="/img/circle.png" />     
+            <General>     
+            <Back src="/img/points.png" />           
+            <Circle src="/img/circle.png" />       
+            <Circle2 src="/img/circle.png" />       
+            <CircleBack src="/img/circulo.svg" />
                 <Layout>
                     <Title 
                         Text1="Registro"

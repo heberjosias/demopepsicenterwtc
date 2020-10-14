@@ -13,6 +13,47 @@ import Patrocinadores from '../components/ui/patrocinadores';
 
 import useEventos from '../hooks/useEventos';
 
+const General = styled.div`
+    position:relative;
+`;
+
+const Back = styled.img`
+    position: absolute; 
+    top: 4%;    
+    width: 100%;  
+    margin: 0 auto;
+    z-index: -999;          
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const CircleBack = styled.img`
+    position: absolute; 
+    top: 14%;
+    right: 15%;
+    width: 220px;
+    z-index: -1;            
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const Circle = styled.div`
+    position: absolute; 
+    top: 20%;
+    right: 0%;
+    height: 350px;    
+    width: 350px;
+    border: 1px solid #1f1f79;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: -1;            
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
 const CTA = styled.section`
   width: 95vw;
   margin: 2em auto 0 auto;
@@ -34,20 +75,25 @@ const Home = () => {
   return ( 
     <>
       <SEO Title="Inicio"/>
-      <Layout>
-        <EventosPrincipal/>
-        <CarteletaPrincipal/>
-        <CTA>
-          <CtaSpotify
-            text1="Escucha a tus"
-            text2="artistas favoritos"
-          />
-          <Newsletter>
-            <CtaNewsletter/>        
-          </Newsletter>        
-        </CTA>
-        <Patrocinadores/>
-      </Layout>
+      <General>
+        <Back src="/img/points.png" />      
+        <CircleBack src="/img/circulo.svg" />    
+        <Circle/>
+        <Layout>
+          <EventosPrincipal/>
+          <CarteletaPrincipal/>
+          <CTA>
+            <CtaSpotify
+              text1="Escucha a tus"
+              text2="artistas favoritos"
+            />
+            <Newsletter>
+              <CtaNewsletter/>        
+            </Newsletter>        
+          </CTA>
+          <Patrocinadores/>
+        </Layout>
+      </General>
     </>
    );
 }

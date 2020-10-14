@@ -12,6 +12,43 @@ import CtaNewsletter from '../../components/ui/ctaNewsletter';
 
 import { FirebaseContext } from '../../firebase';
 
+const General = styled.div`
+    position:relative;
+`;
+
+const Back = styled.img`
+    position: absolute; 
+    top: 5%;    
+    width: 100%;  
+    margin: 0 auto;
+    z-index: -999;          
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const CircleBack = styled.img`
+    position: absolute; 
+    top: 40%;
+    left: -8%;
+    width: 220px;
+    z-index: -1;            
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const Circle = styled.img`
+    position: absolute; 
+    top: 35%;
+    right: 5%;
+    z-index: 10;            
+    width: 60px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
 const Section = styled.section`
     width: 90vw;
     margin: 0 auto;
@@ -292,82 +329,87 @@ const Evento = () => {
     return (
         <> 
             <SEO Title={name}/>
-            <Layout>
-                <Section>
-                    <HeroMobile>
-                        <TitleEvento 
-                            Text1={name}
-                            Text2={fecha}
-                        />
-                        <Fade>
-                            <img src={imgEvento} alt={name}/>
-                        </Fade>
-                        <p>{desc}</p>
-                        <CounterMobile>
-                                <h4>{Restante}</h4>
-                                <Btn href={googlecalendar} target="blank">Google Calendar</Btn>
-                        </CounterMobile>
-                    </HeroMobile>
-                    <HeroDesktop>
-                        <Fade>
-                            <img src={imgEvento} alt={name}/>
-                        </Fade>
-                        <div>
-                            <h2>{name}</h2>   
-                            <h3>{fecha}</h3>
-                            <p>{desc}</p>
-                            <Counter>
-                                <h4>{Restante}</h4>
-                                <Btn href={googlecalendar} target="blank">Google Calendar</Btn>
-                            </Counter>
-                        </div>
-                    </HeroDesktop>
-                    <Configuracion>
-                    <h2>Configuración</h2>
-                    <ConfiguracionImg  src={imgConfiguracion} alt={name}/>  
-                    <h3>Costos</h3>                
-                    <ConfiguracionText>                    
-                        <Costos>
-                            { seccion1 ? <><h4>{seccion1}</h4><p>${costo1}</p></> : null }
-                            { seccion2 ? <><h4>{seccion2}</h4><p>${costo2}</p></> : null }
-                            { seccion3 ? <><h4>{seccion3}</h4><p>${costo3}</p></> : null }
-                            { seccion4 ? <><h4>{seccion4}</h4><p>${costo4}</p></> : null }
-                            { seccion5 ? <><h4>{seccion5}</h4><p>${costo5}</p></> : null }
-                            { seccion6 ? <><h4>{seccion6}</h4><p>${costo6}</p></> : null }
-                            { seccion7 ? <><h4>{seccion7}</h4><p>${costo7}</p></> : null }
-                            { seccion8 ? <><h4>{seccion8}</h4><p>${costo8}</p></> : null }
-                        </Costos>                 
-                        <Adicionales>
-                            <div> 
-                                <Btn href={utm} target="blank">Boletos</Btn>                            
-                            </div>
-                        </Adicionales>  
-                        <Compartir>
-                            <a href="https://www.facebook.com/gopepsicenterwtc/photos/a.411427368881710/3007832065907881/?type=3&theater" target="blank">
-                                <img src="/icon/facebookshare.svg" alt={name}/>
-                            </a>
-                            <a href="https://twitter.com/PepsiCenterWTC/status/1233436926780329991" target="blank">
-                                <img src="/icon/twittershare.svg" alt={name}/>
-                            </a>
-                        </Compartir>
-                    </ConfiguracionText>                     
-                </Configuracion>                    
-                </Section>
-                <SectionNews>
-                    <Dudas>
-                        <h3>Dudas Frecuentes</h3>
-                        {faqs.map(element => (
-                            <Faq 
-                                key={element.key}
-                                element={element}
+            <General>
+                <Back src="/img/points.png" />  
+                <CircleBack src="/img/circulo.svg" />   
+                <Circle src="/img/circle.png" />     
+                <Layout>
+                    <Section>
+                        <HeroMobile>
+                            <TitleEvento 
+                                Text1={name}
+                                Text2={fecha}
                             />
-                        ))}
-                    </Dudas>
-                    <div>
-                        <CtaNewsletter/>
-                    </div>
-                </SectionNews>                
-            </Layout>
+                            <Fade>
+                                <img src={imgEvento} alt={name}/>
+                            </Fade>
+                            <p>{desc}</p>
+                            <CounterMobile>
+                                    <h4>{Restante}</h4>
+                                    <Btn href={googlecalendar} target="blank">Google Calendar</Btn>
+                            </CounterMobile>
+                        </HeroMobile>
+                        <HeroDesktop>
+                            <Fade>
+                                <img src={imgEvento} alt={name}/>
+                            </Fade>
+                            <div>
+                                <h2>{name}</h2>   
+                                <h3>{fecha}</h3>
+                                <p>{desc}</p>
+                                <Counter>
+                                    <h4>{Restante}</h4>
+                                    <Btn href={googlecalendar} target="blank">Google Calendar</Btn>
+                                </Counter>
+                            </div>
+                        </HeroDesktop>
+                        <Configuracion>
+                        <h2>Configuración</h2>
+                        <ConfiguracionImg  src={imgConfiguracion} alt={name}/>  
+                        <h3>Costos</h3>                
+                        <ConfiguracionText>                    
+                            <Costos>
+                                { seccion1 ? <><h4>{seccion1}</h4><p>${costo1}</p></> : null }
+                                { seccion2 ? <><h4>{seccion2}</h4><p>${costo2}</p></> : null }
+                                { seccion3 ? <><h4>{seccion3}</h4><p>${costo3}</p></> : null }
+                                { seccion4 ? <><h4>{seccion4}</h4><p>${costo4}</p></> : null }
+                                { seccion5 ? <><h4>{seccion5}</h4><p>${costo5}</p></> : null }
+                                { seccion6 ? <><h4>{seccion6}</h4><p>${costo6}</p></> : null }
+                                { seccion7 ? <><h4>{seccion7}</h4><p>${costo7}</p></> : null }
+                                { seccion8 ? <><h4>{seccion8}</h4><p>${costo8}</p></> : null }
+                            </Costos>                 
+                            <Adicionales>
+                                <div> 
+                                    <Btn href={utm} target="blank">Boletos</Btn>                            
+                                </div>
+                            </Adicionales>  
+                            <Compartir>
+                                <a href="https://www.facebook.com/gopepsicenterwtc/photos/a.411427368881710/3007832065907881/?type=3&theater" target="blank">
+                                    <img src="/icon/facebookshare.svg" alt={name}/>
+                                </a>
+                                <a href="https://twitter.com/PepsiCenterWTC/status/1233436926780329991" target="blank">
+                                    <img src="/icon/twittershare.svg" alt={name}/>
+                                </a>
+                            </Compartir>
+                        </ConfiguracionText>                     
+                    </Configuracion>                    
+                    </Section>
+                    <SectionNews>
+                        <Dudas>
+                            <h3>Dudas Frecuentes</h3>
+                            {faqs.map(element => (
+                                <Faq 
+                                    key={element.key}
+                                    element={element}
+                                />
+                            ))}
+                        </Dudas>
+                        <div>
+                            <CtaNewsletter/>
+                        </div>
+                    </SectionNews>                
+                </Layout>
+            </General>
         </>
      );
 }

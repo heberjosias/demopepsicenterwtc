@@ -8,6 +8,42 @@ import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import FormContrata from '../components/forms/formContrata';
 
+const General = styled.div`
+    position:relative;
+`;
+
+const Back = styled.img`
+    position: absolute; 
+    top: 8%;      
+    margin: 0 auto;
+    z-index: -999;          
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const CircleBack = styled.img`
+    position: absolute; 
+    top: 12%;
+    right: 0%;
+    width: 180px;
+    z-index: 1;            
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const CircleBack2 = styled.img`
+    position: absolute; 
+    bottom: 50%;
+    left: -5%;
+    z-index: 1;            
+    width: 180px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
 const Intro = styled.section`
     width: 90vw;
     margin: 0 auto;
@@ -76,42 +112,47 @@ const Contrata = () => {
     return (
         <> 
         <SEO Title="Contrata"/>
-        <Layout>
-            <Title 
-                Text1="Contrata"
-                Text2="PCWTC"
-            />
-            <SubTitle
-                Text1="Nuestro Venu"
-                LastLetter="e"
-            />     
-            <Intro>
-                <div>
-                    <p>Pepsi Center WTC es la mejor opción para tus eventos. Se caracteriza por ser un espacio multifuncional y versátil. El recinto cuenta con distintas configuraciones que se adaptan a las necesidades de cada promotor.</p>
-                    <p>Con una capacidad  de 3,342 personas en configuración auditorio y de 6, 486 hasta máximo  8,000 personas en configuración concierto, también  cuenta con su propio y muy completo Rider que lo hace idóneo para todos los géneros musicales.</p>             
-                    <p>Además de estar ubicado en World Trade Center México y tener vías de transporte público que hacen muy fácil la llegada al recinto, cuenta con más de tres mil cajones de estacionamiento.</p>
-                </div>
-            </Intro>   
-            <Destacados>
-                <Fade cascade>
+        <General>
+            <Back src="/img/points.png" />            
+            <CircleBack src="/img/circulo.svg" />  
+            <CircleBack2 src="/img/circulo.svg" />   
+            <Layout>
+                <Title 
+                    Text1="Contrata"
+                    Text2="PCWTC"
+                />
+                <SubTitle
+                    Text1="Nuestro Venu"
+                    LastLetter="e"
+                />     
+                <Intro>
                     <div>
-                        <img src="/icon/sustentable.svg"/>
-                        <p>Recinto<br></br>sustentable</p>
+                        <p>Pepsi Center WTC es la mejor opción para tus eventos. Se caracteriza por ser un espacio multifuncional y versátil. El recinto cuenta con distintas configuraciones que se adaptan a las necesidades de cada promotor.</p>
+                        <p>Con una capacidad  de 3,342 personas en configuración auditorio y de 6, 486 hasta máximo  8,000 personas en configuración concierto, también  cuenta con su propio y muy completo Rider que lo hace idóneo para todos los géneros musicales.</p>             
+                        <p>Además de estar ubicado en World Trade Center México y tener vías de transporte público que hacen muy fácil la llegada al recinto, cuenta con más de tres mil cajones de estacionamiento.</p>
                     </div>
-                    <div>
-                        <img src="/icon/visitor.svg"/>
-                        <p>Espacio para<br></br>7,000 espectadores</p>
-                    </div>
-                    <div>
-                        <img src="/icon/bebidas.svg"/>
-                        <p>Centros de<br></br>consumo</p>
-                    </div>    
-                </Fade>
-            </Destacados>
-            <Form>
-                <FormContrata/>
-            </Form>
-        </Layout>
+                </Intro>   
+                <Destacados>
+                    <Fade cascade>
+                        <div>
+                            <img src="/icon/sustentable.svg"/>
+                            <p>Recinto<br></br>sustentable</p>
+                        </div>
+                        <div>
+                            <img src="/icon/visitor.svg"/>
+                            <p>Espacio para<br></br>7,000 espectadores</p>
+                        </div>
+                        <div>
+                            <img src="/icon/bebidas.svg"/>
+                            <p>Centros de<br></br>consumo</p>
+                        </div>    
+                    </Fade>
+                </Destacados>
+                <Form>
+                    <FormContrata/>
+                </Form>
+            </Layout>
+        </General>
         </>
      );
 }

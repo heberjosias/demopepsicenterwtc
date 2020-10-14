@@ -10,6 +10,20 @@ import SubTitle from '../components/ui/subtitle';
 import Video from '../components/ui/video';
 import Imagen from '../components/ui/imagen';
 
+const General = styled.div`
+    position:relative;
+`;
+
+const Back = styled.img`
+    position: absolute; 
+    top: 9%;      
+    margin: 0 auto;
+    z-index: -999;          
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
 const Intro = styled.section`
     width: 90vw;
     margin: 0 auto;
@@ -62,12 +76,7 @@ const Destacados = styled.div`
 `;
 
 const Icon = styled.div`
-    background: rgb(69,166,222);
-    background: -moz-radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
-    background: -webkit-radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
-    background: radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#45a6de",endColorstr="#381ba7",GradientType=1);
-    box-shadow: 1px 1px 4px 2px rgba(0,0,0,.2);
+    background-image: linear-gradient(-260deg, rgba(4,27,49,.1) 32%, rgba(24,48,82,.4) 48%, rgba(4,27,49,.2) 80%);     
     padding: 1.5em;
     border-radius: 50%;
 `;
@@ -91,100 +100,103 @@ const Conoce = () => {
     return ( 
         <>
             <SEO Title="Conoce"/>
-            <Layout>
-                <Title 
-                    Text1="Conoce"
-                    Text2="PCWTC"
-                />
-                <SubTitle
-                    Text1="Pepsi Center WT"
-                    LastLetter="C"
-                />
-                <Intro>
-                    <div>
-                        <p>Concebido como uno de los mejores venues en México donde se presentan grandes espectaculos en vivo.</p>
-                        <ImgIntro src="/img/conocepcwtc.jpg" alt="Conoce PCWTC"/>
-                        <h3>En el Año</h3>
-                        <Destacados>
-                            <Zoom cascade>
-                                <div>
-                                    <Icon>
-                                        <img src="/icon/karaoke.svg" alt="Conciertos"/>
-                                    </Icon>       
-                                    <br></br>                         
-                                    <p>40</p>
-                                    <p>Conciertos</p>
-                                </div>
-                                <div>
-                                    <Icon>
-                                        <img src="/icon/visitor.svg" alt="Visitantes"/>
-                                    </Icon>     
-                                    <br></br>                         
-                                    <p>4,000</p>
-                                    <p>Visitantes</p>
-                                </div>           
-                                <div>
-                                    <Icon>
-                                        <img src="/icon/spotlights.svg" alt="Shows"/>
-                                    </Icon>     
-                                    <br></br>                         
-                                    <p>10</p>
-                                    <p>Shows</p>
-                                </div>      
-                                <div>
-                                    <Icon>
-                                        <img src="/icon/soldout.svg" alt="Sold out"/>
-                                    </Icon>     
-                                    <br></br>                         
-                                    <p>12</p>
-                                    <p>Sold out</p>
-                                </div>     
-                            </Zoom>                                                                   
-                        </Destacados>
-                    </div>
-                    <Video
-                        url="https://youtu.be/tG3a7CfOXGE"
+            <General>
+                <Back src="/img/points.png" />           
+                <Layout>
+                    <Title 
+                        Text1="Conoce"
+                        Text2="PCWTC"
                     />
-                </Intro>
-                <Gallery>
-                    <Fade bottom>
-                        <Imagen
-                            url="/img/galeria1.jpg"
-                            alt="Galeria PCWTC"
+                    <SubTitle
+                        Text1="Pepsi Center WT"
+                        LastLetter="C"
+                    />
+                    <Intro>
+                        <div>
+                            <p>Concebido como uno de los mejores venues en México donde se presentan grandes espectaculos en vivo.</p>
+                            <ImgIntro src="/img/conocepcwtc.jpg" alt="Conoce PCWTC"/>
+                            <h3>En el Año</h3>
+                            <Destacados>
+                                <Zoom cascade>
+                                    <div>
+                                        <Icon>
+                                            <img src="/icon/karaoke.svg" alt="Conciertos"/>
+                                        </Icon>       
+                                        <br></br>                         
+                                        <p>40</p>
+                                        <p>Conciertos</p>
+                                    </div>
+                                    <div>
+                                        <Icon>
+                                            <img src="/icon/visitor.svg" alt="Visitantes"/>
+                                        </Icon>     
+                                        <br></br>                         
+                                        <p>4,000</p>
+                                        <p>Visitantes</p>
+                                    </div>           
+                                    <div>
+                                        <Icon>
+                                            <img src="/icon/spotlights.svg" alt="Shows"/>
+                                        </Icon>     
+                                        <br></br>                         
+                                        <p>10</p>
+                                        <p>Shows</p>
+                                    </div>      
+                                    <div>
+                                        <Icon>
+                                            <img src="/icon/soldout.svg" alt="Sold out"/>
+                                        </Icon>     
+                                        <br></br>                         
+                                        <p>12</p>
+                                        <p>Sold out</p>
+                                    </div>     
+                                </Zoom>                                                                   
+                            </Destacados>
+                        </div>
+                        <Video
+                            url="https://youtu.be/tG3a7CfOXGE"
                         />
-                    </Fade> 
-                    <Fade bottom>
-                        <Imagen
-                            url="/img/galeria2.jpg"
-                            alt="Galeria PCWTC"
-                        />
-                    </Fade> 
-                    <Fade bottom>
-                        <Imagen
-                            url="/img/galeria3.jpg"
-                            alt="Galeria PCWTC"
-                        />
-                    </Fade> 
-                    <Fade bottom>
-                        <Imagen
-                            url="/img/galeria3.jpg"
-                            alt="Galeria PCWTC"
-                        />
-                    </Fade> 
-                    <Fade bottom>
-                        <Imagen
-                            url="/img/galeria1.jpg"
-                            alt="Galeria PCWTC"
-                        />
-                    </Fade>                   
-                    <Fade bottom>
-                        <Imagen
-                            url="/img/galeria2.jpg"
-                            alt="Galeria PCWTC"
-                        />
-                    </Fade>                                                                                                                         
-                </Gallery>
-            </Layout>
+                    </Intro>
+                    <Gallery>
+                        <Fade bottom>
+                            <Imagen
+                                url="/img/galeria1.jpg"
+                                alt="Galeria PCWTC"
+                            />
+                        </Fade> 
+                        <Fade bottom>
+                            <Imagen
+                                url="/img/galeria2.jpg"
+                                alt="Galeria PCWTC"
+                            />
+                        </Fade> 
+                        <Fade bottom>
+                            <Imagen
+                                url="/img/galeria3.jpg"
+                                alt="Galeria PCWTC"
+                            />
+                        </Fade> 
+                        <Fade bottom>
+                            <Imagen
+                                url="/img/galeria3.jpg"
+                                alt="Galeria PCWTC"
+                            />
+                        </Fade> 
+                        <Fade bottom>
+                            <Imagen
+                                url="/img/galeria1.jpg"
+                                alt="Galeria PCWTC"
+                            />
+                        </Fade>                   
+                        <Fade bottom>
+                            <Imagen
+                                url="/img/galeria2.jpg"
+                                alt="Galeria PCWTC"
+                            />
+                        </Fade>                                                                                                                         
+                    </Gallery>
+                </Layout>
+            </General>
         </>
      );
 }

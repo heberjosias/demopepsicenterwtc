@@ -12,11 +12,56 @@ const General = styled.div`
     position:relative;
 `;
 
+const Back = styled.img`
+    position: absolute; 
+    top: 5%;    
+    left: 0%;
+    width: 100%;  
+    margin: 0 auto;
+    z-index: -999;          
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
 const Circle = styled.img`
     position: absolute; 
-    top: 16%;
-    left: 10%;
+    top: 20%;
+    left: 5%;
     z-index: 10;            
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const Circle2 = styled.img`
+    position: absolute; 
+    top: 14%;
+    right: 10%;
+    z-index: 10;            
+    width: 60px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const CircleBack = styled.img`
+    position: absolute; 
+    top: 20%;
+    right: 0%;
+    z-index: 1;            
+    width: 180px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const CircleBack2 = styled.img`
+    position: absolute; 
+    bottom: 32%;
+    left: -5%;
+    z-index: 1;            
+    width: 180px;
     @media (max-width: 768px) {
         display: none;
     }
@@ -36,7 +81,11 @@ const Newsletter = () => {
         <>
             <SEO Title="Newsletter"/>
             <General> 
-            <Circle src="/img/circle.png" />     
+            <Back src="/img/pointsnews.png" />       
+            <Circle src="/img/circle.png" />       
+            <Circle2 src="/img/circle.png" />       
+            <CircleBack src="/img/circulo.svg" />
+            <CircleBack2 src="/img/circulo.svg" />        
                 <Layout>
                     <Title 
                         Text1="Suscríbete"

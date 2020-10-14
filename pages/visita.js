@@ -9,6 +9,31 @@ import SubTitle from '../components/ui/subtitle';
 import Faq from '../components/faqs/faq';
 import CtaNewsletter from '../components/ui/ctaNewsletter';
 
+const General = styled.div`
+    position:relative;
+`;
+
+const Back = styled.img`
+    position: absolute; 
+    top: 0%;      
+    margin: 0 auto;
+    z-index: -999;          
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const CircleBack = styled.img`
+    position: absolute; 
+    top: 50%;
+    left: -5%;
+    width: 180px;
+    z-index: 1;            
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
 const Llegada = styled.section`
     width: 90vw;
     margin: 0 auto;
@@ -37,12 +62,7 @@ const Icon = styled.div`
     border-radius: 50%;
     transition: transform 2s;
     &:hover{
-        background: rgb(69,166,222);
-        background: -moz-radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
-        background: -webkit-radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
-        background: radial-gradient(circle, rgba(69,166,222,0.3533788515406162) 0%, rgba(28,59,175,0.4318102240896359) 47%, rgba(28,59,175,0.3169642857142857) 72%, rgba(69,166,222,0.3169642857142857) 81%, rgba(56,27,167,0.3393732492997199) 90%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#45a6de",endColorstr="#381ba7",GradientType=1);
-        box-shadow: 1px 1px 4px 2px rgba(0,0,0,.2);
+        background-image: linear-gradient(-260deg, rgba(4,27,49,.1) 32%, rgba(24,48,82,.4) 48%, rgba(4,27,49,.2) 80%);     
         transition: transform 2s;
         transform: scale(1.05);
     }      
@@ -143,82 +163,86 @@ const Visita = () => {
     return (
         <> 
         <SEO Title="Visita" />
-        <Layout>
-            <Title 
-                Text1="Planea"
-                Text2="Tu Visita"
-            />
-            <Llegada>
-                <div>
-                    <SubTitle
-                        Text1="¿Cómo llegar"
-                        LastLetter="?"
-                    />
-                    <Transporte>
-                        <Zoom cascade>
-                            <Icon>
-                                <a href="https://www.google.com/maps/search/metro/@19.39507,-99.181984,15z?hl=es-419" target="blank">
-                                    <img src="/icon/metro.svg" alt="Conciertos"/>
-                                </a>
-                            </Icon>                          
-                            <Icon>
-                                <a href="https://www.google.com/maps/search/metrobus/@19.395069,-99.179109,15z?hl=es-419" target="blank">
-                                    <img src="/icon/metrobus.svg" alt="Conciertos"/>
-                                </a>
-                            </Icon>  
-                            <Icon>
-                                <a href="https://www.google.com/maps/search/ecobici/@19.392612,-99.181602,15z?hl=es-419" target="blank">
-                                    <img src="/icon/bicicleta.svg" alt="Conciertos"/>
-                                </a>
-                            </Icon>  
-                        </Zoom>   
-                    </Transporte>                                                         
-                </div>
-                <div>
-                    <SubTitle
-                        Text1="Estacionamient"
-                        LastLetter="o"
-                    />
-                    <Zoom>
-                        <Estacionamiento src="/img/estacionamiento.png" alt="Estacionamiento PCWTC"/>
-                    </Zoom>
-                </div>                            
-            </Llegada>
-            <SubTitle
-                Text1="Centros de Consum"
-                LastLetter="o"
-            />
-            <Consumo>   
-                <Zoom cascade>
+        <General>
+            <Back src="/img/points.png" />            
+            <CircleBack src="/img/circulo.svg" />  
+            <Layout>
+                <Title 
+                    Text1="Planea"
+                    Text2="Tu Visita"
+                />
+                <Llegada>
                     <div>
-                        <img src="/icon/alimentos.svg"/>
-                        <p>Alimentos</p>
-                    </div>
-                    <div>
-                        <img src="/icon/bebidas.svg"/>
-                        <p>Bebidas</p>
-                    </div>
-                    <div>
-                        <img src="/icon/snacks.svg"/>
-                        <p>Snacks</p>
-                    </div>        
-                </Zoom>                        
-            </Consumo>
-            <SectionNews>
-                <Dudas>
-                    <h3>Dudas Frecuentes</h3>
-                    {faqs.map(element => (
-                        <Faq 
-                            key={element.key}
-                            element={element}
+                        <SubTitle
+                            Text1="¿Cómo llegar"
+                            LastLetter="?"
                         />
-                    ))}
-                </Dudas>
-                <div>
-                    <CtaNewsletter/>
-                </div>
-            </SectionNews>
-        </Layout>
+                        <Transporte>
+                            <Zoom cascade>
+                                <Icon>
+                                    <a href="https://www.google.com/maps/search/metro/@19.39507,-99.181984,15z?hl=es-419" target="blank">
+                                        <img src="/icon/metro.svg" alt="Conciertos"/>
+                                    </a>
+                                </Icon>                          
+                                <Icon>
+                                    <a href="https://www.google.com/maps/search/metrobus/@19.395069,-99.179109,15z?hl=es-419" target="blank">
+                                        <img src="/icon/metrobus.svg" alt="Conciertos"/>
+                                    </a>
+                                </Icon>  
+                                <Icon>
+                                    <a href="https://www.google.com/maps/search/ecobici/@19.392612,-99.181602,15z?hl=es-419" target="blank">
+                                        <img src="/icon/bicicleta.svg" alt="Conciertos"/>
+                                    </a>
+                                </Icon>  
+                            </Zoom>   
+                        </Transporte>                                                         
+                    </div>
+                    <div>
+                        <SubTitle
+                            Text1="Estacionamient"
+                            LastLetter="o"
+                        />
+                        <Zoom>
+                            <Estacionamiento src="/img/estacionamiento.png" alt="Estacionamiento PCWTC"/>
+                        </Zoom>
+                    </div>                            
+                </Llegada>
+                <SubTitle
+                    Text1="Centros de Consum"
+                    LastLetter="o"
+                />
+                <Consumo>   
+                    <Zoom cascade>
+                        <div>
+                            <img src="/icon/alimentos.svg"/>
+                            <p>Alimentos</p>
+                        </div>
+                        <div>
+                            <img src="/icon/bebidas.svg"/>
+                            <p>Bebidas</p>
+                        </div>
+                        <div>
+                            <img src="/icon/snacks.svg"/>
+                            <p>Snacks</p>
+                        </div>        
+                    </Zoom>                        
+                </Consumo>
+                <SectionNews>
+                    <Dudas>
+                        <h3>Dudas Frecuentes</h3>
+                        {faqs.map(element => (
+                            <Faq 
+                                key={element.key}
+                                element={element}
+                            />
+                        ))}
+                    </Dudas>
+                    <div>
+                        <CtaNewsletter/>
+                    </div>
+                </SectionNews>
+            </Layout>
+        </General>
         </>
      );
 }

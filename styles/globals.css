@@ -8,10 +8,10 @@ body {
 
 body{
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url("/img/background.jpg");
-  background-color: #1c3baf;
-}
+  -moz-osx-font-smoothing: grayscale;  
+  background-color: #0071e8;  
+  background-image: linear-gradient(118deg, #0071e8 0%, #009eee 17%, #005dee 39%, #0039d0 60%, #3f1fb1 80%, #3f1fb1 100%);
+  }
 
 @media screen and (max-width: 1025px) {
   body{
@@ -40,7 +40,7 @@ h2{
   margin: 0;
   font-size: 2.5em;
   font-weight: 600;
-  text-shadow: -1px -2px 2px #00d8ff;
+  z-index: 1;
 }
 
 h3{
