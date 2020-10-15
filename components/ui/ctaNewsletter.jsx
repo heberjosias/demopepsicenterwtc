@@ -31,7 +31,7 @@ const Header = styled.div`
     }
     p{
         font-size: 1em;
-    }
+    }    
 `;
 
 const CtaNewsletter = () => {

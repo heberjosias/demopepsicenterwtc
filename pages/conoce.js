@@ -178,22 +178,40 @@ const Conoce = () => {
                         </Fade> 
                         <Fade bottom>
                             <Imagen
-                                url="/img/galeria3.jpg"
+                                url="/img/galeria4.jpg"
                                 alt="Galeria PCWTC"
                             />
                         </Fade> 
                         <Fade bottom>
                             <Imagen
-                                url="/img/galeria1.jpg"
+                                url="/img/galeria5.jpg"
                                 alt="Galeria PCWTC"
                             />
                         </Fade>                   
                         <Fade bottom>
                             <Imagen
-                                url="/img/galeria2.jpg"
+                                url="/img/galeria6.jpg"
                                 alt="Galeria PCWTC"
                             />
-                        </Fade>                                                                                                                         
+                        </Fade>
+                        <Fade bottom>
+                            <Imagen
+                                url="/img/galeria7.jpg"
+                                alt="Galeria PCWTC"
+                            />
+                        </Fade>
+                        <Fade bottom>
+                            <Imagen
+                                url="/img/galeria8.jpg"
+                                alt="Galeria PCWTC"
+                            />
+                        </Fade>
+                        <Fade bottom>
+                            <Imagen
+                                url="/img/galeria9.jpg"
+                                alt="Galeria PCWTC"
+                            />
+                        </Fade>                                                                        
                     </Gallery>
                 </Layout>
             </General>

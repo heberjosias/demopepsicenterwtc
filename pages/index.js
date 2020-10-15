@@ -19,8 +19,8 @@ const General = styled.div`
 
 const Back = styled.img`
     position: absolute; 
-    top: 4%;    
-    width: 100%;  
+    top: 0;    
+    height: 100%;  
     margin: 0 auto;
     z-index: -999;          
     @media (max-width: 768px) {

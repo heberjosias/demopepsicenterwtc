@@ -14,9 +14,9 @@ const General = styled.div`
 
 const Back = styled.img`
     position: absolute; 
-    top: 5%;    
-    left: 2%;
-    width: 95%;  
+    left: 5%;
+    top: 0;    
+    height: 100%;  
     margin: 0 auto;
     z-index: -999;          
     @media (max-width: 768px) {
@@ -56,26 +56,13 @@ const CircleBack = styled.img`
     }
 `;
 
-const Section = styled.div`
-    margin: 2em 0;
-`;
-
-const Newletter = styled.section`
-    margin: 2em auto;
-    @media (min-width: 768px) {
-        width: 60vw;
-    }
-    @media (min-width: 1025px) {
-        width: 40vw;
-    }
-`;
 
 const Cartelera = () => {
     return ( 
         <>
             <SEO Title="Cartelera"/>
             <General>   
-                <Back src="/img/pointsnews.png" />      
+                <Back src="/img/points.png" />      
                 <Circle src="/img/circle.png" />       
                 <Circle2 src="/img/circle.png" />       
                 <CircleBack src="/img/circulo.svg" />    

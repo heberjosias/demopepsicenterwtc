@@ -6,6 +6,7 @@ import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
+import ImgModal from '../components/ui/imgModal';
 import Faq from '../components/faqs/faq';
 import CtaNewsletter from '../components/ui/ctaNewsletter';
 
@@ -15,7 +16,8 @@ const General = styled.div`
 
 const Back = styled.img`
     position: absolute; 
-    top: 0%;      
+    top: 0;    
+    height: 100%;   
     margin: 0 auto;
     z-index: -999;          
     @media (max-width: 768px) {
@@ -71,17 +73,6 @@ const Icon = styled.div`
     }     
 `;
 
-const Estacionamiento = styled.img`
-    padding: 1em 0;
-    @media (min-width: 768px) {
-        transition: transform .4s;
-        &:hover{
-            transition: transform .4s;
-            transform: scale(1.1);
-        }
-    }        
-`;
-
 const Consumo = styled.section`
     width: 90vw;
     margin: 0 auto;
@@ -101,6 +92,7 @@ const Consumo = styled.section`
             font-weight: 600;
             font-size: 1.4em;
         }
+        z-index: -1;
     }
     @media (min-width: 1025px) {        
         width: 70vw;
@@ -203,7 +195,11 @@ const Visita = () => {
                             LastLetter="o"
                         />
                         <Zoom>
-                            <Estacionamiento src="/img/estacionamiento.png" alt="Estacionamiento PCWTC"/>
+                            <ImgModal
+                                url="/img/estacionamiento.png" 
+                                alt="Estacionamiento PCWTC"
+                                imgOpen="/img/estacionamientozoom.png"
+                            />
                         </Zoom>
                     </div>                            
                 </Llegada>

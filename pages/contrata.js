@@ -6,6 +6,7 @@ import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
+import Imagen from '../components/ui/imagen';
 import FormContrata from '../components/forms/formContrata';
 
 const General = styled.div`
@@ -14,7 +15,8 @@ const General = styled.div`
 
 const Back = styled.img`
     position: absolute; 
-    top: 8%;      
+    top: 0;    
+    height: 100%;   
     margin: 0 auto;
     z-index: -999;          
     @media (max-width: 768px) {
@@ -47,26 +49,23 @@ const CircleBack2 = styled.img`
 const Intro = styled.section`
     width: 90vw;
     margin: 0 auto;
-    padding: 1em 0;
+    padding: 2em 0 0 0;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2em;
     p{        
         text-align: left;
-        @media (min-width: 1025px) {
-            text-align: center;
-            padding: 0 5em;
-        }  
+        span{
+            color:#00d8ff;
+            font-weight: 600;
+        }
     }
     @media (min-width: 1025px) {   
-        margin: 2em auto;     
-        background-image: linear-gradient(-260deg, rgba(4,27,49,.4) 32%, rgba(24,48,82,.4) 48%, rgba(4,27,49,.4) 80%);             
-        width: 70%;
+        padding: 3em 0;
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 2em;
     }  
-`;
-
-const Test = styled.div`
-        background-image: linear-gradient(-260deg, rgba(4,27,49,.4) 32%, rgba(24,48,82,.4) 48%, rgba(4,27,49,.4) 80%);     
 `;
 
 const Destacados = styled.section`
@@ -103,7 +102,7 @@ const Form = styled.section`
     margin: 1em auto;
     text-align: center;
     @media (min-width: 1025px) {        
-        width: 70%;
+        width: 80%;
         margin: 1em auto 2em auto;
     }     
 `;
@@ -126,10 +125,16 @@ const Contrata = () => {
                     LastLetter="e"
                 />     
                 <Intro>
+                    <Fade>
+                        <Imagen
+                            url="/img/contrata.jpg"
+                            alt="Contrata PCWTC"
+                        />
+                    </Fade> 
                     <div>
-                        <p>Pepsi Center WTC es la mejor opción para tus eventos. Se caracteriza por ser un espacio multifuncional y versátil. El recinto cuenta con distintas configuraciones que se adaptan a las necesidades de cada promotor.</p>
-                        <p>Con una capacidad  de 3,342 personas en configuración auditorio y de 6, 486 hasta máximo  8,000 personas en configuración concierto, también  cuenta con su propio y muy completo Rider que lo hace idóneo para todos los géneros musicales.</p>             
-                        <p>Además de estar ubicado en World Trade Center México y tener vías de transporte público que hacen muy fácil la llegada al recinto, cuenta con más de tres mil cajones de estacionamiento.</p>
+                        <p>Pepsi Center WTC es la mejor opción para tus eventos. Se caracteriza por ser un espacio <span>multifuncional y versátil</span>. El recinto cuenta con <span>distintas configuraciones</span> que se adaptan a las necesidades de cada promotor.</p>
+                        <p>Con una capacidad de <span>3,342</span> personas en configuración auditorio y de <span>6,486</span> hasta máximo <span>8,000</span> personas en configuración concierto, también  cuenta con su propio y muy completo Rider que lo hace idóneo para <span>todos los géneros musicales</span>.</p>             
+                        <p>Además de estar ubicado en <span>World Trade Center México</span> y tener vías de transporte público que hacen muy fácil la llegada al recinto, cuenta con más de tres mil cajones de estacionamiento.</p>
                     </div>
                 </Intro>   
                 <Destacados>
