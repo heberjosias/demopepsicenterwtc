@@ -5,6 +5,7 @@ import Router, {useRouter} from 'next/router';
 
 import SEO from '../../components/layout/seo';
 import Layout from '../../components/layout/layout';
+import MobileBack from '../../components/ui/mobileBack';
 import TitleEvento from '../../components/ui/titleEvento';
 import {Btn} from '../../components/ui/btn'
 import Faq from '../../components/faqs/faq';
@@ -262,7 +263,7 @@ const Dudas = styled.div`
 const faqs = [
     {
         key:'1',
-        pregunta: 'Cuáles son nuestros horarios de taquilla?',
+        pregunta: '¿Cuáles son nuestros horarios de taquilla?',
         respuesta: 'De lunes a viernes de 09:00 a 20:00 hrs y sábados y domingo de 10:00 a 18:00 hrs',
     },
     {
@@ -330,6 +331,9 @@ const Evento = () => {
         <> 
             <SEO Title={name}/>
             <General>
+                <MobileBack
+                    url="/img/pcwtcback.png"
+                />
                 <Back src="/img/points.png" />  
                 <CircleBack src="/img/circulo.svg" />   
                 <Circle src="/img/circle.png" />     

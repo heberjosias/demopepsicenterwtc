@@ -26,7 +26,7 @@ const Contenido = styled.div`
         text-align: left !important;
         color:#00d8ff;
         text-transform: uppercase;
-        font-weight: 900;
+        font-weight: 600;
     }
     div{
         margin: 2em 0;
@@ -47,7 +47,7 @@ const ContenidoCheck = styled.div`
         text-align: left !important;
         color:#00d8ff;
         text-transform: uppercase;
-        font-weight: 900;
+        font-weight: 600;
     }
     div{
         margin: 2em 0;

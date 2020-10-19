@@ -20,6 +20,7 @@ const Title2 = styled.h1`
     font-weight: 400;
 `;
 
+
 const Title = ({Text1, Text2}) => {
     return (         
         <Section>

@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
+import MobileBack from '../components/ui/mobileBack';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import FormNewsletter from '../components/forms/formNewsletter';
@@ -80,11 +81,14 @@ const Newsletter = () => {
         <>
             <SEO Title="Newsletter"/>
             <General> 
-            <Back src="/img/pointsnews.png" />       
-            <Circle src="/img/circle.png" />       
-            <Circle2 src="/img/circle.png" />       
-            <CircleBack src="/img/circulo.svg" />
-            <CircleBack2 src="/img/circulo.svg" />        
+                <MobileBack
+                    url="/img/pcwtcback.png"
+                />
+                <Back src="/img/pointsnews.png" />       
+                <Circle src="/img/circle.png" />       
+                <Circle2 src="/img/circle.png" />       
+                <CircleBack src="/img/circulo.svg" />
+                <CircleBack2 src="/img/circulo.svg" />        
                 <Layout>
                     <Title 
                         Text1="Suscríbete"

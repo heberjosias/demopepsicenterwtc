@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
+import MobileBack from '../components/ui/mobileBack';
 import Title from '../components/ui/title';
 import CarteleraDesktop from '../components/eventos/carteleraDesktop';
 import CarteleraPrincipal  from '../components/eventos/carteleraPrincipal';
@@ -18,7 +19,7 @@ const Back = styled.img`
     top: 0;    
     height: 100%;  
     margin: 0 auto;
-    z-index: -999;          
+    z-index: -999;
     @media (max-width: 768px) {
         display: none;
     }
@@ -62,6 +63,9 @@ const Cartelera = () => {
         <>
             <SEO Title="Cartelera"/>
             <General>   
+                <MobileBack
+                    url="/img/pcwtcback.png"
+                />
                 <Back src="/img/points.png" />      
                 <Circle src="/img/circle.png" />       
                 <Circle2 src="/img/circle.png" />       

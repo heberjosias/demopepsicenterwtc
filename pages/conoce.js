@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
+import MobileBack from '../components/ui/mobileBack';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import Video from '../components/ui/video';
@@ -101,6 +102,9 @@ const Conoce = () => {
         <>
             <SEO Title="Conoce"/>
             <General>
+                <MobileBack
+                    url="/img/pcwtcback.png"
+                />
                 <Back src="/img/points.png" />           
                 <Layout>
                     <Title 
@@ -113,7 +117,7 @@ const Conoce = () => {
                     />
                     <Intro>
                         <div>
-                            <p>Concebido como uno de los mejores venues en México donde se presentan grandes espectaculos en vivo.</p>
+                            <p>Concebido como uno de los mejores venues en México donde se presentan grandes espectáculos en vivo.</p>
                             <ImgIntro src="/img/conocepcwtc.jpg" alt="Conoce PCWTC"/>
                             <h3>En el Año</h3>
                             <Destacados>

@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
+import MobileBack from '../components/ui/mobileBack';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import Imagen from '../components/ui/imagen';
@@ -59,12 +60,12 @@ const Intro = styled.section`
             font-weight: 600;
         }
     }
-    @media (min-width: 1025px) {   
+    @media (min-width: 1024px) {   
         padding: 3em 0;
         width: 80%;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        column-gap: 2em;
+        column-gap: 3em;
     }  
 `;
 
@@ -101,7 +102,7 @@ const Form = styled.section`
     width: 90vw;
     margin: 1em auto;
     text-align: center;
-    @media (min-width: 1025px) {        
+    @media (min-width: 1024px) {        
         width: 80%;
         margin: 1em auto 2em auto;
     }     
@@ -112,6 +113,9 @@ const Contrata = () => {
         <> 
         <SEO Title="Contrata"/>
         <General>
+            <MobileBack
+                url="/img/pcwtcback.png"
+            />                      
             <Back src="/img/points.png" />            
             <CircleBack src="/img/circulo.svg" />  
             <CircleBack2 src="/img/circulo.svg" />   

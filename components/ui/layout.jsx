@@ -7,6 +7,7 @@ export const Menu = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
     img{
         width: 150px;
     }
@@ -41,6 +42,7 @@ export const Menu = styled.header`
 `;
 
 export const MenuMobile = styled.div`
+    z-index: 999;
     img{
         width: 4em;
         padding: 0 1em;
@@ -57,14 +59,15 @@ export const NavMobile = styled.div`
     height: 100vh;
     width: 100vw;
     position: fixed;
-    z-index: 100;
     top:0vh;
     left:0vh;    
     display: flex;
     justify-content: center;
     align-items: center;
     text-align:center;
+    z-index: 999;
     img{
+        z-index: 1999;
         width: 200px;
     }    
     nav{

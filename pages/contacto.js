@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
+import MobileBack from '../components/ui/mobileBack';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import FormContacto from '../components/forms/formContacto';
@@ -115,6 +116,9 @@ const Contacto = () => {
         <> 
         <SEO Title="Contacto"/>
         <General>   
+            <MobileBack
+                url="/img/pcwtcback.png"
+            />            
             <Back src="/img/points.png" />       
             <Circle src="/img/circle.png" />       
             <Circle2 src="/img/circle.png" />       

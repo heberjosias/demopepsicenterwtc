@@ -29,8 +29,8 @@ const ModalImg = styled.div`
     img{
         max-height: 95%;
         max-width: 95%;
-    }
-    cursor: pointer;
+        cursor: pointer;
+    }    
     @media (min-width: 1023px) {
         background-color: rgba(255,255,255,.5);
         img{

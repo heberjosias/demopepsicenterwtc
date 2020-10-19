@@ -4,6 +4,7 @@ import Zoom from 'react-reveal/Zoom';
 
 import SEO from '../components/layout/seo';
 import Layout from '../components/layout/layout';
+import MobileBack from '../components/ui/mobileBack';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import ImgModal from '../components/ui/imgModal';
@@ -132,7 +133,7 @@ const Visita = () => {
     const faqs = [
         {
             key:'1',
-            pregunta: 'Cuáles son nuestros horarios de taquilla?',
+            pregunta: '¿Cuáles son nuestros horarios de taquilla?',
             respuesta: 'De lunes a viernes de 09:00 a 20:00 hrs y sábados y domingo de 10:00 a 18:00 hrs',
         },
         {
@@ -156,6 +157,9 @@ const Visita = () => {
         <> 
         <SEO Title="Visita" />
         <General>
+            <MobileBack
+                url="/img/pcwtcback.png"
+            />                                  
             <Back src="/img/points.png" />            
             <CircleBack src="/img/circulo.svg" />  
             <Layout>
