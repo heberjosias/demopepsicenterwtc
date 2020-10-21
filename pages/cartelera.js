@@ -8,6 +8,7 @@ import Title from '../components/ui/title';
 import CarteleraDesktop from '../components/eventos/carteleraDesktop';
 import CarteleraPrincipal  from '../components/eventos/carteleraPrincipal';
 import Patrocinadores from '../components/ui/patrocinadores';
+import Footer from '../components/layout/footer';
 
 const General = styled.div`
     position:relative;
@@ -78,6 +79,7 @@ const Cartelera = () => {
                     <CarteleraDesktop/>
                     <CarteleraPrincipal/>
                     <Patrocinadores/>
+                <Footer/>
                 </Layout>
             </General>
         </>        

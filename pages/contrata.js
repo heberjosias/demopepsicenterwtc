@@ -9,6 +9,8 @@ import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import Imagen from '../components/ui/imagen';
 import FormContrata from '../components/forms/formContrata';
+import Footer from '../components/layout/footer';
+
 
 const General = styled.div`
     position:relative;
@@ -53,6 +55,7 @@ const Intro = styled.section`
     padding: 2em 0 0 0;
     display: grid;
     grid-template-columns: 1fr;
+    text-align: center;
     p{        
         text-align: left;
         span{
@@ -160,6 +163,7 @@ const Contrata = () => {
                 <Form>
                     <FormContrata/>
                 </Form>
+            <Footer/>
             </Layout>
         </General>
         </>

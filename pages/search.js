@@ -7,6 +7,7 @@ import Layout from '../components/layout/layout';
 import Title from '../components/ui/title';
 import CarteleraPrincipal  from '../components/eventos/carteleraPrincipal';
 import Patrocinadores from '../components/ui/patrocinadores';
+import Footer from '../components/layout/footer';
 
 const Search = () => {
 
@@ -20,6 +21,7 @@ const Search = () => {
         />
         <CarteleraPrincipal/>
         <Patrocinadores/>
+      <Footer/>
       </Layout>
     </>
    );

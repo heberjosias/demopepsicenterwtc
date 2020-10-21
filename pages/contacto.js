@@ -10,6 +10,7 @@ import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import FormContacto from '../components/forms/formContacto';
 import {Btn} from '../components/ui/btn';
+import Footer from '../components/layout/footer';
 
 const General = styled.div`
     position:relative;
@@ -161,6 +162,7 @@ const Contacto = () => {
                         frameborder="0">
                     </iframe>
                 </Mapa>
+            <Footer/>
             </Layout>
         </General>
         </>

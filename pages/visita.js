@@ -10,6 +10,7 @@ import SubTitle from '../components/ui/subtitle';
 import ImgModal from '../components/ui/imgModal';
 import Faq from '../components/faqs/faq';
 import CtaNewsletter from '../components/ui/ctaNewsletter';
+import Footer from '../components/layout/footer';
 
 const General = styled.div`
     position:relative;
@@ -241,6 +242,7 @@ const Visita = () => {
                         <CtaNewsletter/>
                     </div>
                 </SectionNews>
+            <Footer/>
             </Layout>
         </General>
         </>

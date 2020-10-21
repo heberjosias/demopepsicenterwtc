@@ -7,6 +7,7 @@ import MobileBack from '../components/ui/mobileBack';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import FormPrensa from '../components/forms/formPrensa';
+import Footer from '../components/layout/footer';
 
 const General = styled.div`
     position:relative;
@@ -90,7 +91,8 @@ const Prensa = () => {
                     />      
                     <Datos>
                         <FormPrensa/>
-                    </Datos>           
+                    </Datos> 
+                <Footer/>          
                 </Layout>
             </General>
         </>

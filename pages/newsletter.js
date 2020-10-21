@@ -8,6 +8,7 @@ import MobileBack from '../components/ui/mobileBack';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import FormNewsletter from '../components/forms/formNewsletter';
+import Footer from '../components/layout/footer';
 
 const General = styled.div`
     position:relative;
@@ -104,7 +105,8 @@ const Newsletter = () => {
                     />      
                     <Datos>
                         <FormNewsletter/>
-                    </Datos>           
+                    </Datos>  
+                <Footer/>         
                 </Layout>
             </General>
         </>

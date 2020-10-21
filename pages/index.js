@@ -10,6 +10,7 @@ import Blog from '../components/blog/blog';
 import CtaSpotify from '../components/ui/ctaSpotify';
 import CtaNewsletter from '../components/ui/ctaNewsletter';
 import Patrocinadores from '../components/ui/patrocinadores';
+import FooterHome from '../components/layout/footerHome';
 
 import useEventos from '../hooks/useEventos';
 
@@ -92,6 +93,7 @@ const Home = () => {
             </Newsletter>        
           </CTA>
           <Patrocinadores/>
+        <FooterHome/>
         </Layout>
       </General>
     </>

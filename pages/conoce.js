@@ -10,6 +10,7 @@ import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
 import Video from '../components/ui/video';
 import Imagen from '../components/ui/imagen';
+import Footer from '../components/layout/footer';
 
 const General = styled.div`
     position:relative;
@@ -95,6 +96,12 @@ const Gallery = styled.section`
         grid-template-columns: repeat(3, 1fr);
         gap: 2em;  
     }
+`;
+
+const MobileDisplay = styled.div`
+    @media (max-width: 1024px) {
+        display:none;
+    }    
 `;
 
 const Conoce = () => {
@@ -211,12 +218,15 @@ const Conoce = () => {
                             />
                         </Fade>
                         <Fade bottom>
-                            <Imagen
-                                url="/img/galeria9.jpg"
-                                alt="Galeria PCWTC"
-                            />
+                            <MobileDisplay>
+                                <Imagen
+                                    url="/img/galeria9.jpg"
+                                    alt="Galeria PCWTC"
+                                />
+                            </MobileDisplay>
                         </Fade>                                                                        
                     </Gallery>
+                <Footer/>
                 </Layout>
             </General>
         </>

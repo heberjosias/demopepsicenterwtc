@@ -10,6 +10,7 @@ import TitleEvento from '../../components/ui/titleEvento';
 import {Btn} from '../../components/ui/btn'
 import Faq from '../../components/faqs/faq';
 import CtaNewsletter from '../../components/ui/ctaNewsletter';
+import Footer from '../../components/layout/footer';
 
 import { FirebaseContext } from '../../firebase';
 
@@ -241,7 +242,7 @@ const SectionNews = styled.section`
     @media (min-width: 1025px) {        
         width: 95vw;
         padding: 1em 0 2em 0;
-        grid-template-columns: 60% 38%;
+        grid-template-columns: 60% 39%;
     }   
 `;
 
@@ -411,7 +412,8 @@ const Evento = () => {
                         <div>
                             <CtaNewsletter/>
                         </div>
-                    </SectionNews>                
+                    </SectionNews>     
+                <Footer/>           
                 </Layout>
             </General>
         </>
