@@ -86,6 +86,7 @@ const Section = styled.section`
         width: 100vw;
         display: grid;        
         grid-template-columns: 30% 70%;
+        align-items: center;
     }  
 `;
 
@@ -108,7 +109,7 @@ const Hoteles = styled.section`
 
 const Consumo = styled.div`
     text-align: center;
-    padding: 1em 0 0 0;    
+    padding: 1em 0;    
     section{
         padding: 1em 0;
         display: grid;    
