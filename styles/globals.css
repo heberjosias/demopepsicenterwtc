@@ -19,9 +19,28 @@ body{
   }  
 };
 
-
 * {
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0071e8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(118deg, #0071e8 0%, #009eee 17%, #005dee 39%, #0039d0 60%, #3f1fb1 80%, #3f1fb1 100%);
+  border-radius: 20px;  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f1fb1;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 a {

@@ -56,6 +56,7 @@ const STATE_INICIAL = {
     reggaeton:'',
     ritmoslatinos:'',
     rock:'',
+    standup: '',
     youtubers:'',
   }
 
@@ -63,7 +64,7 @@ const FormNewsletter = () => {
 
     const [error, guardarError] = useState(false);
     const {valores, errores, handleChange, handleSubmit} = useValidacion(STATE_INICIAL, validarNewsletter, crearNewsletter);
-    const { name, email, phone, electronica, hiphop, metal, oldies, pop, reggaeton, ritmoslatinos, rock, youtubers } = valores;    
+    const { name, email, phone, electronica, hiphop, metal, oldies, pop, reggaeton, ritmoslatinos, rock, standup, youtubers } = valores;    
 
     const router = useRouter();
     const { firebase } = useContext(FirebaseContext);
@@ -82,6 +83,7 @@ const FormNewsletter = () => {
             reggaeton,
             ritmoslatinos,
             rock,
+            standup,
             youtubers,
             creado: Date.now(), 
           }
@@ -201,7 +203,16 @@ const FormNewsletter = () => {
                             onChange={handleChange}
                         />                                   
                         <CheckLabel htmlFor="rock">Rock</CheckLabel>
-                    </p>                                                 
+                    </p>   
+                    <p>
+                        <CheckGeneral 
+                            type="checkbox" 
+                            id="rock" 
+                            value={standup}
+                            onChange={handleChange}
+                        />                                   
+                        <CheckLabel htmlFor="rock">Stand Up</CheckLabel>
+                    </p>                                                                     
                     <p>
                         <CheckGeneral 
                             type="checkbox" 

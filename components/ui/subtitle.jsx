@@ -28,7 +28,7 @@ const SubtitleBack = styled.h2`
     color: transparent;
     z-index: -999;
     @media (max-width: 1020px) {
-        font-size: 2.4em;
+        font-size: 2em;
         margin: -40px 0 0 0;
     }    
     @media (max-width: 767px) {

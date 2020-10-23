@@ -22,8 +22,10 @@ const Back = styled.img`
     height: 100%;   
     margin: 0 auto;
     z-index: -999;          
-    @media (max-width: 768px) {
-        display: none;
+    @media (max-width: 1024px) {
+        top: 15%;    
+        height: auto;   
+        background-repeat: repeat-y;
     }
 `;
 
@@ -75,14 +77,44 @@ const Icon = styled.div`
     }     
 `;
 
-const Consumo = styled.section`
+const Section = styled.section`
     width: 90vw;
     margin: 0 auto;
     padding: 1em 0;
-    text-align: center;    
-    display: grid;    
-    grid-template-columns: repeat(3,1fr);
-    gap: 1em;    
+    @media (min-width: 1025px) {        
+        margin: 0;
+        width: 100vw;
+        display: grid;        
+        grid-template-columns: 30% 70%;
+    }  
+`;
+
+const Hoteles = styled.section`
+    section{
+        text-align: center;
+        padding: 1em 0;
+        img{
+            width: 5em;
+            @media (min-width: 1025px) {        
+                width: 10em;
+            }              
+        }
+        p{            
+            font-weight: 600;
+            font-size: 1.4em;
+        }
+    }
+`;
+
+const Consumo = styled.div`
+    text-align: center;
+    padding: 1em 0 0 0;    
+    section{
+        padding: 1em 0;
+        display: grid;    
+        grid-template-columns: repeat(3,1fr);
+        gap: 1em;    
+    }
     div{
         img{
             width: 5em;
@@ -208,26 +240,44 @@ const Visita = () => {
                         </Zoom>
                     </div>                            
                 </Llegada>
-                <SubTitle
-                    Text1="Centros de Consum"
-                    LastLetter="o"
-                />
-                <Consumo>   
-                    <Zoom cascade>
-                        <div>
-                            <img src="/icon/alimentos.svg"/>
-                            <p>Alimentos</p>
-                        </div>
-                        <div>
-                            <img src="/icon/bebidas.svg"/>
-                            <p>Bebidas</p>
-                        </div>
-                        <div>
-                            <img src="/icon/snacks.svg"/>
-                            <p>Snacks</p>
-                        </div>        
-                    </Zoom>                        
-                </Consumo>
+                <Section>
+                    <Hoteles>
+                        <SubTitle
+                            Text1="Hotele"
+                            LastLetter="s"
+                        />
+                        <section>
+                            <div>
+                                <a href="/docs/convenios.pdf" target="blank">
+                                    <img src="/icon/hotel.svg"/>
+                                    <p>Múltiples convenios</p>
+                                </a>
+                            </div>
+                        </section>
+                    </Hoteles>
+                    <Consumo>   
+                        <SubTitle
+                            Text1="Centros de Consum"
+                            LastLetter="o"
+                        />
+                        <section>                        
+                            <Zoom cascade>
+                                <div>
+                                    <img src="/icon/alimentos.svg"/>
+                                    <p>Alimentos</p>
+                                </div>
+                                <div>
+                                    <img src="/icon/bebidas.svg"/>
+                                    <p>Bebidas</p>
+                                </div>
+                                <div>
+                                    <img src="/icon/snacks.svg"/>
+                                    <p>Snacks</p>
+                                </div>        
+                            </Zoom>  
+                        </section>                      
+                    </Consumo>
+                </Section>
                 <SectionNews>
                     <Dudas>
                         <h3>Dudas Frecuentes</h3>

@@ -8,8 +8,13 @@ const Section = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
+    text-align: center;
+    img{
+        margin: 0 auto;
+    }    
     @media (min-width: 767px) {
-        gap: 2em;
+        width: 95vw;
+        gap: 4em;
     }    
     @media (min-width: 1024px) {
         margin: 3em auto 2em auto;

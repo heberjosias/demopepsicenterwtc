@@ -39,7 +39,7 @@ const Meses = styled.div`
         font-style: italic;        
     }
     }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         display: none;
     }    
 `;

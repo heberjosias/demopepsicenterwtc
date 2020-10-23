@@ -22,8 +22,10 @@ const Back = styled.img`
     height: 100%;   
     margin: 0 auto;
     z-index: -999;          
-    @media (max-width: 768px) {
-        display: none;
+    @media (max-width: 1024px) {
+        top: 15%;    
+        height: auto;   
+        background-repeat: repeat-y;
     }
 `;
 
@@ -69,6 +71,10 @@ const Intro = styled.section`
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         column-gap: 3em;
+    }  
+    @media (max-width: 1024px) {   
+        width: 90vw;
+        column-gap: 2em;
     }  
 `;
 
@@ -152,7 +158,7 @@ const Contrata = () => {
                         </div>
                         <div>
                             <img src="/icon/visitor.svg"/>
-                            <p>Espacio para<br></br>7,000 espectadores</p>
+                            <p>Espacio para<br></br>8,000 espectadores</p>
                         </div>
                         <div>
                             <img src="/icon/bebidas.svg"/>

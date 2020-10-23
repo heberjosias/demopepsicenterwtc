@@ -22,6 +22,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-firebase-file-uploader": "^2.4.3",
+    "react-images": "^1.1.7",
     "react-particles-js": "^3.3.0",
     "react-player": "^2.6.2",
     "react-reveal": "^1.2.2"

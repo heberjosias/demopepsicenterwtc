@@ -22,8 +22,11 @@ const Back = styled.img`
     height: 100%;   
     margin: 0 auto;
     z-index: -999;          
-    @media (max-width: 768px) {
-        display: none;
+    @media (max-width: 1024px) {
+        top: 10%;    
+        height: auto;   
+        background-repeat: repeat;
+        background-size: auto;
     }
 `;
 

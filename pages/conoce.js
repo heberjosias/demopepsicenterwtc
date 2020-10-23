@@ -21,8 +21,10 @@ const Back = styled.img`
     top: 9%;      
     margin: 0 auto;
     z-index: -999;          
-    @media (max-width: 768px) {
-        display: none;
+    @media (max-width: 1024px) {
+        top: 10%;    
+        height: auto;   
+        background-repeat: repeat-y;
     }
 `;
 
@@ -99,7 +101,7 @@ const Gallery = styled.section`
 `;
 
 const MobileDisplay = styled.div`
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
         display:none;
     }    
 `;
@@ -124,7 +126,7 @@ const Conoce = () => {
                     />
                     <Intro>
                         <div>
-                            <p>Concebido como uno de los mejores venues en México donde se presentan grandes espectáculos en vivo.</p>
+                            <p>Uno de los mejores venues en México donde se presentan grandes espectáculos en vivo, streaming e híbridos.</p>
                             <ImgIntro src="/img/conocepcwtc.jpg" alt="Conoce PCWTC"/>
                             <h3>En el Año</h3>
                             <Destacados>
