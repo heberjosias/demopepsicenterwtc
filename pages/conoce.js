@@ -128,7 +128,7 @@ const Conoce = () => {
                         <div>
                             <p>Uno de los mejores venues en México donde se presentan grandes espectáculos en vivo, streaming e híbridos.</p>
                             <ImgIntro src="/img/conocepcwtc.jpg" alt="Conoce PCWTC"/>
-                            <h3>En el Año</h3>
+                            <h3>En nuestra historia</h3>
                             <Destacados>
                                 <Zoom cascade>
                                     <div>
@@ -136,7 +136,7 @@ const Conoce = () => {
                                             <img src="/icon/karaoke.svg" alt="Conciertos"/>
                                         </Icon>       
                                         <br></br>                         
-                                        <p>40</p>
+                                        <p>272</p>
                                         <p>Conciertos</p>
                                     </div>
                                     <div>
@@ -144,7 +144,7 @@ const Conoce = () => {
                                             <img src="/icon/visitor.svg" alt="Visitantes"/>
                                         </Icon>     
                                         <br></br>                         
-                                        <p>4,000</p>
+                                        <p>1.5 millones</p>
                                         <p>Visitantes</p>
                                     </div>           
                                     <div>
@@ -152,7 +152,7 @@ const Conoce = () => {
                                             <img src="/icon/spotlights.svg" alt="Shows"/>
                                         </Icon>     
                                         <br></br>                         
-                                        <p>10</p>
+                                        <p>26</p>
                                         <p>Shows</p>
                                     </div>      
                                     <div>
@@ -160,7 +160,7 @@ const Conoce = () => {
                                             <img src="/icon/soldout.svg" alt="Sold out"/>
                                         </Icon>     
                                         <br></br>                         
-                                        <p>12</p>
+                                        <p>39</p>
                                         <p>Sold out</p>
                                     </div>     
                                 </Zoom>                                                                   

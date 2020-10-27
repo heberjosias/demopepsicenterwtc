@@ -33,10 +33,10 @@ const Patrocinadores = () => {
     return (         
         <Section>
             <Fade cascade >
-                <img src="/img/patrocinador.jpg"/>
-                <img src="/img/patrocinador.jpg"/>
-                <img src="/img/patrocinador.jpg"/>
-                <img src="/img/patrocinador.jpg"/>                 
+                <img src="/img/doritos.jpg"/>
+                <img src="/img/doritos.jpg"/>
+                <img src="/img/doritos.jpg"/>
+                <img src="/img/doritos.jpg"/>                 
             </Fade>
         </Section>
      );

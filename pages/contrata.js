@@ -140,7 +140,7 @@ const Contrata = () => {
                 <Intro>
                     <Fade>
                         <Imagen
-                            url="/img/contrata.jpg"
+                            url="/img/contrata1.jpg"
                             alt="Contrata PCWTC"
                         />
                     </Fade> 

@@ -82,7 +82,7 @@ const Home = () => {
         <Back src="/img/points.png" />      
         <CircleBack src="/img/circulo.svg" />    
         <Circle/>
-        <Layout>
+        <Layout>          
           <EventosPrincipal/>
           <CarteletaPrincipal/>
           <CTA>

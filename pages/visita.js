@@ -83,22 +83,27 @@ const Section = styled.section`
     padding: 1em 0;
     @media (min-width: 1025px) {        
         margin: 0;
-        width: 100vw;
         display: grid;        
         grid-template-columns: 30% 70%;
-        align-items: center;
     }  
 `;
 
 const Hoteles = styled.section`
+    padding: 1em;
     section{
         text-align: center;
-        padding: 1em 0;
         img{
-            width: 5em;
+            padding: .5em;
+            width: 5em;         
+            transition: transform 2s;
             @media (min-width: 1025px) {        
                 width: 10em;
-            }              
+            }   
+            &:hover{
+                border-radius: 50%;
+                background-image: linear-gradient(-260deg, rgba(4,27,49,.1) 32%, rgba(24,48,82,.4) 48%, rgba(4,27,49,.2) 80%);     
+                transition: transform 2s;
+            }
         }
         p{            
             font-weight: 600;
@@ -251,9 +256,9 @@ const Visita = () => {
                             <div>
                                 <a href="/docs/convenios.pdf" target="blank">
                                     <img src="/icon/hotel.svg"/>
-                                    <p>Múltiples convenios</p>
                                 </a>
                             </div>
+                            <p>Múltiples convenios</p>
                         </section>
                     </Hoteles>
                     <Consumo>   
