@@ -11,6 +11,7 @@ const Section = styled.section`
     text-align: center;
     img{
         margin: 0 auto;
+        box-shadow: 1px 1px 4px 2px rgba(0,0,0,.4);
     }    
     @media (min-width: 767px) {
         width: 95vw;
@@ -34,9 +35,9 @@ const Patrocinadores = () => {
         <Section>
             <Fade cascade >
                 <img src="/img/doritos.jpg"/>
-                <img src="/img/doritos.jpg"/>
-                <img src="/img/doritos.jpg"/>
-                <img src="/img/doritos.jpg"/>                 
+                <img src="/img/patrocinador.jpg"/>
+                <img src="/img/patrocinador.jpg"/>
+                <img src="/img/patrocinador.jpg"/>                 
             </Fade>
         </Section>
      );

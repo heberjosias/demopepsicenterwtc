@@ -7,6 +7,7 @@ import Layout from '../components/layout/layout';
 import MobileBack from '../components/ui/mobileBack';
 import Title from '../components/ui/title';
 import SubTitle from '../components/ui/subtitle';
+import ImgCarrousel from '../components/ui/imgCarrousel';
 import Imagen from '../components/ui/imagen';
 import FormContrata from '../components/forms/formContrata';
 import Footer from '../components/layout/footer';
@@ -118,6 +119,35 @@ const Form = styled.section`
 `;
 
 const Contrata = () => {
+
+    const Imgs = [
+        {
+            key:'1',
+            url: '/img/contrata1.jpg',
+            alt: 'Contrata PCWTC',
+        },
+        {
+            key:'2',
+            url: '/img/contrata2.jpg',
+            alt: 'Contrata PCWTC',
+        },
+        {
+            key:'3',
+            url: '/img/contrata3.jpg',
+            alt: 'Contrata PCWTC',
+        },
+        {
+            key:'4',
+            url: '/img/contrata4.jpg',
+            alt: 'Contrata PCWTC',
+        },
+        {
+            key:'5',
+            url: '/img/contrata5.jpg',
+            alt: 'Contrata PCWTC',
+        },        
+    ];
+
     return (
         <> 
         <SEO Title="Contrata"/>
@@ -139,9 +169,8 @@ const Contrata = () => {
                 />     
                 <Intro>
                     <Fade>
-                        <Imagen
-                            url="/img/contrata1.jpg"
-                            alt="Contrata PCWTC"
+                        <ImgCarrousel
+                            elements={Imgs}                        
                         />
                     </Fade> 
                     <div>
