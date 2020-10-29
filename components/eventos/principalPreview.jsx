@@ -6,12 +6,13 @@ import styled from '@emotion/styled';
 import {Btn, BtnCTA} from '../ui/btn';
 
 const EventoDesktop = styled.div`
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 2em;
     img{
         cursor: pointer;
-        box-shadow: 1px 1px 4px 2px rgba(0,0,0,.4);
+        box-shadow: 1px 1px 4px 2px rgba(0,0,0,.03);
         transition: transform .4s;
         &:hover{
             transition: transform .4s;

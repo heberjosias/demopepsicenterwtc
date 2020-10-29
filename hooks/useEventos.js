@@ -9,7 +9,7 @@ const useEventos = orden => {
 
     useEffect(() => {
         const obtenerProductos = () => {
-            firebase.db.collection('eventos').orderBy(orden, 'desc').onSnapshot(manejarSnapshot)
+            firebase.db.collection('eventos').orderBy(orden, 'asc').onSnapshot(manejarSnapshot)
         }
         obtenerProductos();
     }, []);

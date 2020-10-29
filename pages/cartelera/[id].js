@@ -317,7 +317,7 @@ const Evento = () => {
     }, [id, nota]);
     //console.log(nota);
 
-    const { name, fecha, conteo, desc, googlecalendar,imgEvento, imgConfiguracion, seccion1, costo1, seccion2, costo2, seccion3, costo3, seccion4, costo4, seccion5, costo5, seccion6, costo6, seccion7, costo7, seccion8, costo8, utm, objetos, tour, playlist  } =nota;
+    const { name, fecha, conteo, desc, googlecalendar,imgEvento, imgConfiguracion, seccion1, costo1, seccion2, costo2, seccion3, costo3, seccion4, costo4, seccion5, costo5, seccion6, costo6, seccion7, costo7, seccion8, costo8, utm, facebook, twitter  } =nota;
 
     let fechaActual = new Date();
     let fechaFiltro = new Date(conteo);
@@ -389,10 +389,10 @@ const Evento = () => {
                                 </div>
                             </Adicionales>  
                             <Compartir>
-                                <a href="https://www.facebook.com/gopepsicenterwtc/photos/a.411427368881710/3007832065907881/?type=3&theater" target="blank">
+                                <a href={facebook} target="blank">
                                     <img src="/icon/facebookshare.svg" alt={name}/>
                                 </a>
-                                <a href="https://twitter.com/PepsiCenterWTC/status/1233436926780329991" target="blank">
+                                <a href={twitter}  target="blank">
                                     <img src="/icon/twittershare.svg" alt={name}/>
                                 </a>
                             </Compartir>

@@ -46,6 +46,7 @@ export const MenuMobile = styled.div`
     img{
         width: 4em;
         padding: 0 1em;
+        z-index: 9999;
     }
     @media (min-width: 1025px) {
         display: none;
@@ -67,7 +68,7 @@ export const NavMobile = styled.div`
     text-align:center;
     z-index: 999;
     img{
-        z-index: 1999;
+        z-index: 9999;
         width: 200px;
     }    
     nav{

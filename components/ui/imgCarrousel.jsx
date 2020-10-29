@@ -2,11 +2,13 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Section = styled.div`
-    margin: auto;    
+    margin: 0;    
+    padding: 0;
     overflow: hidden;
     ul{
         display: flex;
         width: 500%;
+        margin: 0;
         padding: 0;
         list-style-type: none;
 

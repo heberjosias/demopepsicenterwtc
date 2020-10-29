@@ -3,8 +3,9 @@ import styled from '@emotion/styled';
 
 const Section = styled.div`
     position: absolute; 
+    z-index: -999;
     img{
-        opacity: 0.4;
+        opacity: 0.6;
     }
     @media (min-width: 767px) {
         display: none;

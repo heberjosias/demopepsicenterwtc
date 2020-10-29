@@ -92,18 +92,19 @@ const Hoteles = styled.section`
     padding: 1em;
     section{
         text-align: center;
-        img{
-            padding: .5em;
-            width: 5em;         
+        img{            
+            padding: 1em;
+            width: 8em;         
             transition: transform 2s;
             @media (min-width: 1025px) {        
-                width: 10em;
+                margin: 1em 0;
+                width: 12em;
             }   
             &:hover{
                 border-radius: 50%;
                 background-image: linear-gradient(-260deg, rgba(4,27,49,.1) 32%, rgba(24,48,82,.4) 48%, rgba(4,27,49,.2) 80%);     
                 transition: transform 2s;
-            }
+            }            
         }
         p{            
             font-weight: 600;
@@ -258,7 +259,6 @@ const Visita = () => {
                                     <img src="/icon/hotel.svg"/>
                                 </a>
                             </div>
-                            <p>Múltiples convenios</p>
                         </section>
                     </Hoteles>
                     <Consumo>   

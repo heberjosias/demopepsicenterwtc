@@ -141,11 +141,11 @@ const Conoce = () => {
                                     </div>
                                     <div>
                                         <Icon>
-                                            <img src="/icon/visitor.svg" alt="Visitantes"/>
+                                            <img src="/icon/destacado.svg" alt="Destacados"/>
                                         </Icon>     
                                         <br></br>                         
-                                        <p>1.5 millones</p>
-                                        <p>Visitantes</p>
+                                        <p>39</p>
+                                        <p>Destacados</p>
                                     </div>           
                                     <div>
                                         <Icon>
@@ -154,15 +154,15 @@ const Conoce = () => {
                                         <br></br>                         
                                         <p>26</p>
                                         <p>Shows</p>
-                                    </div>      
+                                    </div>                                                                       
                                     <div>
                                         <Icon>
-                                            <img src="/icon/soldout.svg" alt="Sold out"/>
+                                            <img src="/icon/visitor.svg" alt="Visitantes"/>
                                         </Icon>     
                                         <br></br>                         
-                                        <p>39</p>
-                                        <p>Sold out</p>
-                                    </div>     
+                                        <p>1.5 millones</p>
+                                        <p>Visitantes</p>
+                                    </div>            
                                 </Zoom>                                                                   
                             </Destacados>
                         </div>
